@@ -1,0 +1,69 @@
+{
+    "moods": {
+        "happy": {
+            "emoji": "😊",
+            "label": "Happy",
+            "color": "#22c55e",
+            "gradientFrom": "#22c55e",
+            "gradientTo": "#16a34a",
+            "description": "You're radiating positive energy! Your facial expression shows genuine happiness and warmth.",
+            "wellness_tips": [
+                "Share your positivity with someone today",
+                "Capture this moment in a gratitude journal",
+                "Engage in activities that maintain this joyful state",
+                "Use this energy to tackle a challenging task"
+            ]
+        },
+        "sad": {
+            "emoji": "😢",
+            "label": "Sad",
+            "color": "#3b82f6",
+            "gradientFrom": "#3b82f6",
+            "gradientTo": "#2563eb",
+            "description": "It looks like you might be feeling a bit down. Remember, it's okay to feel this way.",
+            "wellness_tips": [
+                "Take a few deep breaths and practice mindfulness",
+                "Reach out to a friend or loved one for support",
+                "Listen to uplifting music or watch something comforting",
+                "Consider a short walk outdoors to boost your mood"
+            ]
+        },
+        "angry": {
+            "emoji": "😠",
+            "label": "Angry",
+            "color": "#ef4444",
+            "gradientFrom": "#ef4444",
+            "gradientTo": "#dc2626",
+            "description": "Your expression suggests frustration or anger. Let's work on channeling that energy positively.",
+            "wellness_tips": [
+                "Try the 4-7-8 breathing technique to calm down",
+                "Step away from the situation briefly if possible",
+                "Write down what's bothering you to process emotions",
+                "Engage in physical activity to release tension"
+            ]
+        },
+        "confused": {
+            "emoji": "🤔",
+            "label": "Confused",
+            "color": "#f59e0b",
+            "gradientFrom": "#f59e0b",
+            "gradientTo": "#d97706",
+            "description": "You seem to be contemplating something. Curiosity and reflection are signs of a thoughtful mind.",
+            "wellness_tips": [
+                "Break the problem into smaller, manageable parts",
+                "Take a short break to clear your mind",
+                "Discuss your thoughts with someone you trust",
+                "Write down your questions to organize your thinking"
+            ]
+        }
+    },
+    "expressions_map": {
+        "happy": "happy",
+        "sad": "sad",
+        "angry": "angry",
+        "disgusted": "angry",
+        "fearful": "confused",
+        "surprised": "confused",
+        "neutral": "happy"
+    }
+}

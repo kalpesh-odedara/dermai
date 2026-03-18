@@ -1,0 +1,92 @@
+{
+    "navigation": [
+        {
+            "page": "Home",
+            "route": "/",
+            "keywords": [
+                "home",
+                "main",
+                "index",
+                "start",
+                "homepage"
+            ]
+        },
+        {
+            "page": "About",
+            "route": "/about",
+            "keywords": [
+                "about",
+                "about us",
+                "who we are",
+                "company",
+                "info"
+            ]
+        },
+        {
+            "page": "Services",
+            "route": "/services",
+            "keywords": [
+                "services",
+                "what you do",
+                "treatments",
+                "care"
+            ]
+        },
+        {
+            "page": "Appointment",
+            "route": "/appointment",
+            "keywords": [
+                "appointment",
+                "book",
+                "schedule",
+                "visit",
+                "doctor"
+            ]
+        },
+        {
+            "page": "Prescription",
+            "route": "/prescription",
+            "keywords": [
+                "prescription",
+                "medicine",
+                "medication",
+                "analyze",
+                "image"
+            ]
+        },
+        {
+            "page": "Contact",
+            "route": "/contact",
+            "keywords": [
+                "contact",
+                "call",
+                "reach",
+                "support",
+                "help",
+                "location",
+                "address"
+            ]
+        },
+        {
+            "page": "Face Recognition",
+            "route": "/face-recognition",
+            "keywords": [
+                "face",
+                "face recognition",
+                "mood",
+                "emotion",
+                "expression",
+                "analyze face",
+                "detect mood"
+            ]
+        }
+    ],
+    "triggers": [
+        "navigate to",
+        "go to",
+        "open",
+        "show me",
+        "take me to",
+        "switch to"
+    ]
+}

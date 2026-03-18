@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* Medical Palette */
+    --background: 210 40% 98%;
+    --foreground: 216 56% 24%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 216 56% 24%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 56% 24%;
+
+    /* Deep Navy - Primary */
+    --primary: 216 56% 24%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Soft backgrounds */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 216 56% 24%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 216 25% 45%;
+
+    /* Clean Cyan - Accent */
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+
+    /* Medical specific tokens */
+    --navy: 216 56% 24%;
+    --cyan: 199 89% 48%;
+    --cyan-light: 199 89% 95%;
+    --navy-light: 216 56% 95%;
+    --success: 158 64% 42%;
+    --warning: 43 96% 56%;
+
+    /* Glassmorphism */
+    --glass: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.2;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(216 56% 24%) 0%, hsl(216 56% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(199 89% 58%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(199 89% 95%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(216 56% 24% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(216 56% 24% / 0.1), 0 2px 4px -2px hsl(216 56% 24% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(216 56% 24% / 0.1), 0 4px 6px -4px hsl(216 56% 24% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(216 56% 24% / 0.1), 0 8px 10px -6px hsl(216 56% 24% / 0.1);
+    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 216 56% 24%;
+    --sidebar-primary: 216 56% 24%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 199 89% 95%;
+    --sidebar-accent-foreground: 216 56% 24%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 216 56% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 216 56% 16%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 216 56% 16%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 216 56% 12%;
+
+    --secondary: 216 40% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 216 32% 22%;
+    --muted-foreground: 210 20% 65%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 216 32% 25%;
+    --input: 216 32% 25%;
+    --ring: 199 89% 48%;
+
+    --glass: 216 56% 16% / 0.7;
+    --glass-border: 0 0% 100% / 0.1;
+
+    --sidebar-background: 216 56% 12%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 216 40% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 216 32% 25%;
+    --sidebar-ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-accent);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}

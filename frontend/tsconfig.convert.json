@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": false,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": false,
+        "outDir": "./src_js",
+        "jsx": "preserve",
+        "strict": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ]
+}

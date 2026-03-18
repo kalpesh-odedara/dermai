@@ -1,0 +1,1793 @@
+[
+    {
+        "problem": "Viral Skin Infection (Warts/HPV)",
+        "description": "Small, grainy skin growths caused by the human papillomavirus (HPV).",
+        "symptoms": [
+            "Small, fleshy, grainy bumps",
+            "Rough to the touch",
+            "Sprinkled with black pinpoints"
+        ],
+        "medical_solutions": [
+            "Salicylic acid",
+            "Cryotherapy (freezing)",
+            "Laser treatment"
+        ],
+        "lifestyle_tips": [
+            "Avoid touching other's warts",
+            "Don't pick at warts",
+            "Wear flip-flops in public showers"
+        ],
+        "recommended_ingredients": [
+            "Salicylic Acid",
+            "Trichloroacetic Acid"
+        ],
+        "natural_remedies": [
+            "Duct tape method",
+            "Apple cider vinegar",
+            "Garlic"
+        ]
+    },
+    {
+        "problem": "Benign Keratosis (Age Spots / Seborrheic)",
+        "description": "A common noncancerous skin growth that usually appears as a brown, black or light tan growth on the face, chest, shoulders or back.",
+        "symptoms": [
+            "Waxy or scaly, slightly raised growth",
+            "Look like they were 'stuck on' the skin",
+            "Usually painless but can itch"
+        ],
+        "medical_solutions": [
+            "Cryosurgery",
+            "Curettage",
+            "Electrocautery"
+        ],
+        "lifestyle_tips": [
+            "Don't try to pick or scrape them off",
+            "Monitor for changes in appearance"
+        ],
+        "recommended_ingredients": [
+            "None"
+        ],
+        "natural_remedies": [
+            "None"
+        ]
+    },
+    {
+        "problem": "Melanocytic Nevi (Common Moles)",
+        "description": "Common benign moles that are typically harmless but should be monitored for changes.",
+        "symptoms": [
+            "Uniform tan, brown or black color",
+            "Distinct edges",
+            "Oval or round shape",
+            "Usually smaller than 6mm"
+        ],
+        "medical_solutions": [
+            "Regular monitoring by a dermatologist",
+            "Surgical excision if atypical or bothersome"
+        ],
+        "lifestyle_tips": [
+            "Perform monthly skin self-exams",
+            "Monitor for ABCDE changes (Asymmetry, Border, Color, Diameter, Evolving)",
+            "Strict sun protection"
+        ],
+        "recommended_ingredients": [
+            "Broad-spectrum Sunscreen (SPF 50+)"
+        ],
+        "natural_remedies": [
+            "None (requires professional monitoring)"
+        ]
+    },
+    {
+        "problem": "Atopic Dermatitis (Chronic Flare-ups)",
+        "description": "A skin condition that causes small, fluid-filled blisters on the palms of the hands and the sides of the fingers.",
+        "symptoms": [
+            "Small, deep-set blisters",
+            "Intense itching",
+            "Burning or pain",
+            "Skin peeling as blisters dry"
+        ],
+        "medical_solutions": [
+            "Corticosteroid creams",
+            "Light therapy",
+            "Botox injections (to reduce sweating)"
+        ],
+        "lifestyle_tips": [
+            "Avoid nickel and cobalt triggers",
+            "Use lukewarm water and gentle cleansers",
+            "Protect hands from moisture with gloves"
+        ],
+        "recommended_ingredients": [
+            "Hydrocortisone",
+            "Urea",
+            "Petrolatum"
+        ],
+        "natural_remedies": [
+            "Cool, wet compresses",
+            "Soaking in Witch hazel",
+            "Managing stress"
+        ]
+    },
+    {
+        "problem": "Acne (Common Acne)",
+        "description": "A condition where hair follicles become plugged with oil and dead skin cells.",
+        "symptoms": [
+            "Whiteheads",
+            "Blackheads",
+            "Small red, tender bumps (papules)",
+            "Pimples (pustules)",
+            "Large, solid, painful lumps under the skin (nodules)"
+        ],
+        "medical_solutions": [
+            "Topical Benzoyl Peroxide to kill bacteria",
+            "Salicylic Acid to unclog pores",
+            "Retinoids (Adapalene) to prevent clogged follicles",
+            "Topical or oral antibiotics for inflammatory acne"
+        ],
+        "natural_remedies": [
+            "Tea tree oil for its antibacterial properties",
+            "Honey and cinnamon mask for inflammation",
+            "Aloe vera to soothe irritation"
+        ],
+        "lifestyle_tips": [
+            "Wash your face twice a day with a gentle cleanser",
+            "Avoid touching or picking at pimples",
+            "Use non-comedogenic (pore-clogging) makeup and sunscreen",
+            "Manage stress levels as it can trigger flare-ups"
+        ],
+        "recommended_ingredients": [
+            "Salicylic Acid",
+            "Benzoyl Peroxide",
+            "Niacinamide",
+            "Azelaic Acid",
+            "Retinol"
+        ]
+    },
+    {
+        "problem": "Psoriasis / Lichen Planus (Autoimmune)",
+        "description": "An autoimmune disease that causes skin cells to build up and form scales and itchy, dry patches.",
+        "symptoms": [
+            "Red patches of skin covered with thick, silvery scales",
+            "Small scaling spots",
+            "Dry, cracked skin that may bleed",
+            "Itching, burning, or soreness"
+        ],
+        "medical_solutions": [
+            "Topical Vitamin D analogues (Calcipotriene)",
+            "Coal Tar to reduce scaling",
+            "Salicylic Acid to promote sloughing of dead skin",
+            "Biologics for severe cases"
+        ],
+        "natural_remedies": [
+            "Aloe vera extract cream",
+            "Fish oil supplements",
+            "Oregon grape (topical)"
+        ],
+        "lifestyle_tips": [
+            "Take daily baths with salts or oils",
+            "Keep skin moisturized",
+            "Get limited amounts of sunlight (with caution)",
+            "Avoid triggers like smoking and heavy alcohol consumption"
+        ],
+        "recommended_ingredients": [
+            "Salicylic Acid",
+            "Coal Tar",
+            "Urea",
+            "Lactic Acid",
+            "Vitamin D"
+        ]
+    },
+    {
+        "problem": "Rosacea",
+        "description": "A condition that causes redness and often small, red, pus-filled bumps on the face.",
+        "symptoms": [
+            "Facial redness (flushing)",
+            "Visible broken blood vessels",
+            "Pus-filled bumps",
+            "Eye irritation (Ocular rosacea)"
+        ],
+        "medical_solutions": [
+            "Topical Metronidazole",
+            "Azelaic Acid to reduce bumps",
+            "Brimonidine for redness",
+            "Oral antibiotics like Doxycycline"
+        ],
+        "natural_remedies": [
+            "Green tea compresses",
+            "Chamomile tea (cooled) to soothe skin",
+            "Niacinamide-rich serums"
+        ],
+        "lifestyle_tips": [
+            "Identify and avoid triggers (spicy food, alcohol, extreme temperatures)",
+            "Wear broad-spectrum sunscreen daily",
+            "Use gentle, non-abrasive skin care products",
+            "Protect your face from wind and cold"
+        ],
+        "recommended_ingredients": [
+            "Azelaic Acid",
+            "Niacinamide",
+            "Centella Asiatica (Cica)",
+            "Green Tea Extract"
+        ]
+    },
+    {
+        "problem": "Melasma",
+        "description": "A condition that causes brown or grayish patches on the skin, typically on the face.",
+        "symptoms": [
+            "Dark patches on forehead, cheeks, or upper lip",
+            "Symmetrical distribution of patches"
+        ],
+        "medical_solutions": [
+            "Hydroquinone for skin lightening",
+            "Tretinoin and Corticosteroids",
+            "Azelaic Acid or Kojic Acid",
+            "Chemical peels or laser therapy"
+        ],
+        "natural_remedies": [
+            "Aloe vera to help fade hyperpigmentation",
+            "Vitamin C serums",
+            "Licorice root extract"
+        ],
+        "lifestyle_tips": [
+            "STRICT sun protection (SPF 50+ and hats)",
+            "Avoid hormonal triggers if possible",
+            "Use tinted sunscreen with iron oxides for extra protection"
+        ],
+        "recommended_ingredients": [
+            "Vitamin C",
+            "Alpha Arbutin",
+            "Kojic Acid",
+            "Tranexamic Acid",
+            "Niacinamide"
+        ]
+    },
+    {
+        "problem": "Fungal Infection (Dermatophytosis)",
+        "description": "A skin infection caused by fungus.",
+        "symptoms": [
+            "Red, itchy, scaly patches",
+            "Ring-shaped rash",
+            "Blisters",
+            "Cracked skin between toes"
+        ],
+        "medical_solutions": [
+            "Over-the-counter Antifungal creams (Clotrimazole, Terbinafine)",
+            "Prescription antifungal ointments",
+            "Oral antifungal medications"
+        ],
+        "natural_remedies": [
+            "Tea tree oil",
+            "Apple cider vinegar diluted soaks",
+            "Garlic paste (caution: can irritate)"
+        ],
+        "lifestyle_tips": [
+            "Keep the affected area clean and dry",
+            "Do not share personal items (towels, combs)",
+            "Wear breathable cotton socks and shoes",
+            "Use antifungal powder in shoes"
+        ],
+        "recommended_ingredients": [
+            "Clotrimazole",
+            "Terbinafine",
+            "Ketoconazole",
+            "Tea Tree Oil"
+        ]
+    },
+    {
+        "problem": "Contact Dermatitis",
+        "description": "A red, itchy rash caused by direct contact with a substance or an allergic reaction to it.",
+        "symptoms": [
+            "Red rash",
+            "Itching, which may be severe",
+            "Dry, cracked, scaly skin",
+            "Bumps and blisters, sometimes with oozing and crusting"
+        ],
+        "medical_solutions": [
+            "Steroid creams or ointments (Hydrocortisone)",
+            "Oral medications (Corticosteroids, Antihistamines)",
+            "Cool, wet compresses"
+        ],
+        "natural_remedies": [
+            "Aloe vera gel",
+            "Oatmeal baths",
+            "Cool compresses with plain water"
+        ],
+        "lifestyle_tips": [
+            "Identify and avoid the substance that caused the reaction",
+            "Apply anti-itch cream or calamine lotion",
+            "Avoid scratching the affected area",
+            "Wash skin immediately after contact with a known trigger"
+        ],
+        "recommended_ingredients": [
+            "Hydrocortisone",
+            "Calamine",
+            "Allantoin",
+            "Panthenol"
+        ]
+    },
+    {
+        "problem": "Hives (Urticaria)",
+        "description": "Red, itchy welts that result from a skin reaction.",
+        "symptoms": [
+            "Batches of red or skin-colored welts (wheals)",
+            "Welts that vary in size and change shape",
+            "Severe itching"
+        ],
+        "medical_solutions": [
+            "Antihistamines (Loratadine, Cetirizine)",
+            "Corticosteroids for severe cases",
+            "Epinephrine for emergency allergic reactions"
+        ],
+        "natural_remedies": [
+            "Cold compresses",
+            "Witch hazel to reduce swelling",
+            "Baking soda paste to soothe itching"
+        ],
+        "lifestyle_tips": [
+            "Avoid known triggers (certain foods, medications, stress)",
+            "Wear loose-fitting, smooth-textured clothing",
+            "Apply cool cloths to the affected area"
+        ],
+        "recommended_ingredients": [
+            "Antihistamines",
+            "Menthol (for cooling)",
+            "Colloidal Oatmeal"
+        ]
+    },
+    {
+        "problem": "Vitiligo",
+        "description": "A disease that causes loss of skin color in patches.",
+        "symptoms": [
+            "Patchy loss of skin color",
+            "Premature whitening or graying of hair",
+            "Loss of color in tissues inside the mouth and nose"
+        ],
+        "medical_solutions": [
+            "Corticosteroid creams",
+            "Calcineurin inhibitors",
+            "Psoralen plus ultraviolet A (PUVA) therapy",
+            "Skin grafting in some cases"
+        ],
+        "natural_remedies": [
+            "Ginkgo biloba supplements (consult doctor)",
+            "Vitamin B12 and Folic Acid",
+            "Papaya juice/paste"
+        ],
+        "lifestyle_tips": [
+            "Protect skin from the sun (sunburn can worsen it)",
+            "Use concealers or skin dyes for cosmetic appearance",
+            "Avoid tattoos (Koebner phenomenon)"
+        ],
+        "recommended_ingredients": [
+            "Sunscreen (SPF 50+)",
+            "Tocopherol (Vitamin E)",
+            "Antioxidants"
+        ]
+    },
+    {
+        "problem": "Dry Skin (Xerosis)",
+        "description": "A common condition with many causes, often environmental.",
+        "symptoms": [
+            "A feeling of skin tightness",
+            "Skin that feels and looks rough",
+            "Itching (pruritus)",
+            "Flaking, scaling or peeling"
+        ],
+        "medical_solutions": [
+            "Urea-based creams",
+            "Lactic acid lotions",
+            "Topical steroids if inflamed"
+        ],
+        "natural_remedies": [
+            "Honey as a humectant",
+            "Avocado oil for deep nourishment",
+            "Shea butter"
+        ],
+        "lifestyle_tips": [
+            "Shorten shower time and use lukewarm water",
+            "Apply moisturizer immediately after bathing",
+            "Use gentle, fragrance-free cleansers",
+            "Drink plenty of water"
+        ],
+        "recommended_ingredients": [
+            "Hyaluronic Acid",
+            "Squalane",
+            "Glycerin",
+            "Ceramides",
+            "Petrolatum"
+        ]
+    },
+    {
+        "problem": "Dermatitis (General)",
+        "description": "A general term that describes a common skin irritation.",
+        "symptoms": [
+            "Itchy skin",
+            "Dry skin",
+            "Rash",
+            "Swollen skin"
+        ],
+        "medical_solutions": [
+            "Corticosteroid creams",
+            "Calcineruin inhibitors",
+            "Phototherapy"
+        ],
+        "natural_remedies": [
+            "Oatmeal baths",
+            "Coconut oil",
+            "Aloe vera"
+        ],
+        "lifestyle_tips": [
+            "Avoid allergens",
+            "Moisturize regularly",
+            "Use gentle soaps"
+        ],
+        "recommended_ingredients": [
+            "Hydrocortisone",
+            "Ceramides",
+            "Glycerin"
+        ]
+    },
+    {
+        "problem": "Ringworm (Tinea Corporis)",
+        "description": "A fungal infection that develops on the top layer of the skin.",
+        "symptoms": [
+            "Ring-shaped rash",
+            "Itchy skin",
+            "Red, scaly, cracked skin",
+            "Light patches"
+        ],
+        "medical_solutions": [
+            "Antifungal creams (Clotrimazole)",
+            "Oral antifungal meds for severe cases"
+        ],
+        "natural_remedies": [
+            "Tea tree oil",
+            "Apple cider vinegar",
+            "Oregano oil"
+        ],
+        "lifestyle_tips": [
+            "Keep skin dry",
+            "Avoid shared towels",
+            "Wash hands after touching pets"
+        ],
+        "recommended_ingredients": [
+            "Clotrimazole",
+            "Ketoconazole",
+            "Terbinafine"
+        ]
+    },
+    {
+        "problem": "Scabies",
+        "description": "An itchy skin condition caused by a tiny burrowing mite called Sarcoptes scabiei.",
+        "symptoms": [
+            "Severe itching, especially at night",
+            "Thin, irregular burrow tracks made of tiny blisters"
+        ],
+        "medical_solutions": [
+            "Permethrin cream",
+            "Ivermectin (oral)"
+        ],
+        "natural_remedies": [
+            "Tea tree oil",
+            "Neem oil",
+            "Aloe vera"
+        ],
+        "lifestyle_tips": [
+            "Wash all clothes/bedding in hot water",
+            "Treat all household members"
+        ],
+        "recommended_ingredients": [
+            "Permethrin",
+            "Sulfur",
+            "Benzyl Benzoate"
+        ]
+    },
+    {
+        "problem": "Boils (Furuncles)",
+        "description": "Painful, pus-filled bumps that form under the skin when bacteria infect one or more hair follicles.",
+        "symptoms": [
+            "Painful, red bump",
+            "Fills with pus",
+            "Develops a yellow or white tip"
+        ],
+        "medical_solutions": [
+            "Incision and drainage by a doctor",
+            "Antibiotics"
+        ],
+        "natural_remedies": [
+            "Warm compresses",
+            "Turmeric paste",
+            "Tea tree oil"
+        ],
+        "lifestyle_tips": [
+            "Never squeeze a boil",
+            "Keep the area clean",
+            "Wash hands after touching boils"
+        ],
+        "recommended_ingredients": [
+            "Benzoyl Peroxide",
+            "Mupirocin"
+        ]
+    },
+    {
+        "problem": "Sunburn",
+        "description": "Red, painful, itchy skin that's hot to the touch, caused by overexposure to UV radiation.",
+        "symptoms": [
+            "Redness",
+            "Pain",
+            "Swelling",
+            "Blisters",
+            "Peeling skin"
+        ],
+        "medical_solutions": [
+            "Pain relievers",
+            "Low-dose corticosteroid creams"
+        ],
+        "natural_remedies": [
+            "Aloe vera",
+            "Cool baths",
+            "Milk compresses"
+        ],
+        "lifestyle_tips": [
+            "Drink plenty of water",
+            "Avoid the sun while healing",
+            "Use loose clothing"
+        ],
+        "recommended_ingredients": [
+            "Aloe Vera",
+            "Panthenol",
+            "Vitamin E"
+        ]
+    },
+    {
+        "problem": "Skin Allergy",
+        "description": "An immune system reaction to a normally harmless substance.",
+        "symptoms": [
+            "Redness",
+            "Itching",
+            "Swelling",
+            "Blisters",
+            "Hives"
+        ],
+        "medical_solutions": [
+            "Antihistamines",
+            "Topical steroids",
+            "Epinephrine for severe reactions"
+        ],
+        "natural_remedies": [
+            "Cold compresses",
+            "Baking soda bath",
+            "Quercetin"
+        ],
+        "lifestyle_tips": [
+            "Identify and avoid triggers",
+            "Use fragrance-free products"
+        ],
+        "recommended_ingredients": [
+            "Calamine",
+            "Allantoin",
+            "Colloidal Oatmeal"
+        ]
+    },
+    {
+        "problem": "Impetigo",
+        "description": "A highly contagious skin infection that mainly affects infants and children.",
+        "symptoms": [
+            "Red sores that rupture and form honey-colored crusts",
+            "Itching",
+            "Soreness"
+        ],
+        "medical_solutions": [
+            "Mupirocin ointment",
+            "Oral antibiotics"
+        ],
+        "natural_remedies": [
+            "Grapefruit seed extract",
+            "Honey"
+        ],
+        "lifestyle_tips": [
+            "Avoid sharing towels",
+            "Keep nails short",
+            "Wash sores gently"
+        ],
+        "recommended_ingredients": [
+            "Mupirocin",
+            "Retapamulin"
+        ]
+    },
+    {
+        "problem": "Cellulitis",
+        "description": "A common, potentially serious bacterial skin infection.",
+        "symptoms": [
+            "Red, swollen, tender skin",
+            "Warmth in the area",
+            "Fever/Chills",
+            "Red streaks"
+        ],
+        "medical_solutions": [
+            "Oral antibiotics",
+            "Hospitalization for IV antibiotics in severe cases"
+        ],
+        "natural_remedies": [
+            "Elevation of the limb",
+            "Cold compresses for pain"
+        ],
+        "lifestyle_tips": [
+            "Treat even small cuts carefully",
+            "Manage underlying conditions like athlete's foot"
+        ],
+        "recommended_ingredients": [
+            "Antibiotics (as prescribed)"
+        ]
+    },
+    {
+        "problem": "Melanoma (Serious Skin Cancer)",
+        "description": "The most serious type of skin cancer, develops in the cells that produce melanin.",
+        "symptoms": [
+            "Change in an existing mole",
+            "Development of a new pigmented or unusual-looking growth",
+            "ABCDE rules: Asymmetry, Border, Color, Diameter, Evolving"
+        ],
+        "medical_solutions": [
+            "Surgical excision",
+            "Immunotherapy",
+            "Targeted therapy",
+            "Chemotherapy"
+        ],
+        "natural_remedies": [
+            "None (requires immediate medical intervention)"
+        ],
+        "lifestyle_tips": [
+            "Regular skin checks",
+            "Avoid UV exposure",
+            "Wear protective clothing"
+        ],
+        "recommended_ingredients": [
+            "Broad-spectrum Sunscreen"
+        ]
+    },
+    {
+        "problem": "Alopecia Areata",
+        "description": "An autoimmune disorder that causes patchy hair loss.",
+        "symptoms": [
+            "Round or oval patches of baldness on the scalp or body"
+        ],
+        "medical_solutions": [
+            "Corticosteroid injections",
+            "Minoxidil",
+            "Topical immunotherapy"
+        ],
+        "natural_remedies": [
+            "Onion juice",
+            "Essential oils (lavender, rosemary)"
+        ],
+        "lifestyle_tips": [
+            "Manage stress",
+            "Protect bald areas from the sun",
+            "Wigs or head coverings"
+        ],
+        "recommended_ingredients": [
+            "Minoxidil",
+            "Caffeine",
+            "Peppermint Oil"
+        ]
+    },
+    {
+        "problem": "Lichen Planus",
+        "description": "An inflammatory condition that can affect skin, hair, nails, and mucous membranes.",
+        "symptoms": [
+            "Purplish, flat-topped bumps",
+            "Itching",
+            "Lacy white patches in the mouth",
+            "Nail damage"
+        ],
+        "medical_solutions": [
+            "Corticosteroids",
+            "Retinoids",
+            "Antihistamines",
+            "Light therapy"
+        ],
+        "natural_remedies": [
+            "Aloe vera",
+            "Turmeric"
+        ],
+        "lifestyle_tips": [
+            "Avoid injuries to the skin",
+            "Manage stress",
+            "Avoid triggers like certain medications"
+        ],
+        "recommended_ingredients": [
+            "Niacinamide",
+            "Vitamin A"
+        ]
+    },
+    {
+        "problem": "Hidradenitis Suppurativa",
+        "description": "A chronic skin condition that causes small, painful lumps to form under the skin.",
+        "symptoms": [
+            "Painful pea-sized lumps",
+            "Tunnels (tracts) under the skin",
+            "Leaking sores",
+            "Blackheads"
+        ],
+        "medical_solutions": [
+            "Antibiotics",
+            "Biologics (Adalimumab)",
+            "Surgery to remove affected skin",
+            "Steroid injections"
+        ],
+        "natural_remedies": [
+            "Warm compresses",
+            "Turmeric supplements",
+            "Zinc supplements"
+        ],
+        "lifestyle_tips": [
+            "Lose weight if needed",
+            "Stop smoking",
+            "Avoid shaving affected areas",
+            "Wear loose clothing"
+        ],
+        "recommended_ingredients": [
+            "Benzoyl Peroxide",
+            "Chlorhexidine"
+        ]
+    },
+    {
+        "problem": "Basal Cell Carcinoma",
+        "description": "A type of skin cancer that begins in the basal cells.",
+        "symptoms": [
+            "A pearly or waxy bump",
+            "A flat, flesh-colored or brown scar-like lesion",
+            "A bleeding or scabbing sore that heals and returns"
+        ],
+        "medical_solutions": [
+            "Mohs surgery",
+            "Excisional surgery",
+            "Curettage and electrodesiccation",
+            "Radiation therapy"
+        ],
+        "natural_remedies": [
+            "None (requires medical treatment)"
+        ],
+        "lifestyle_tips": [
+            "Sun protection",
+            "Regular skin exams"
+        ],
+        "recommended_ingredients": [
+            "Sunscreen (SPF 50+)"
+        ]
+    },
+    {
+        "problem": "Squamous Cell Carcinoma",
+        "description": "A common form of skin cancer that develops in the squamous cells.",
+        "symptoms": [
+            "A firm, red nodule",
+            "A flat sore with a scaly crust",
+            "A new sore or raised area on an old scar or ulcer"
+        ],
+        "medical_solutions": [
+            "Mohs surgery",
+            "Excisional surgery",
+            "Laser therapy",
+            "Cryosurgery"
+        ],
+        "natural_remedies": [
+            "None (requires medical treatment)"
+        ],
+        "lifestyle_tips": [
+            "Avoid tanning beds",
+            "Wear protective clothing",
+            "Check skin for changes"
+        ],
+        "recommended_ingredients": [
+            "Sunscreen (SPF 50+)"
+        ]
+    },
+    {
+        "problem": "Folliculitis",
+        "description": "A common skin condition in which hair follicles become inflamed.",
+        "symptoms": [
+            "Small red bumps or white-headed pimples around hair follicles",
+            "Pus-filled blisters",
+            "Itchy, burning skin",
+            "Painful, tender skin"
+        ],
+        "medical_solutions": [
+            "Antibiotic creams",
+            "Oral antibiotics",
+            "Antifungal creams or pills",
+            "Steroid creams"
+        ],
+        "natural_remedies": [
+            "Warm compresses",
+            "Tea tree oil",
+            "White vinegar soaks"
+        ],
+        "lifestyle_tips": [
+            "Avoid tight clothing",
+            "Shave with care",
+            "Clean hot tubs regularly"
+        ],
+        "recommended_ingredients": [
+            "Benzoyl Peroxide",
+            "Clindamycin",
+            "Tea Tree Oil"
+        ]
+    },
+    {
+        "problem": "Tinea Versicolor",
+        "description": "A common fungal infection that causes small, discolored patches of skin.",
+        "symptoms": [
+            "Patches of skin discoloration, usually on the back, chest, and upper arms",
+            "Patches may be lighter or darker than the surrounding skin",
+            "Mild itching",
+            "Scaling"
+        ],
+        "medical_solutions": [
+            "Antifungal creams/lotions (Ketoconazole, Selenium Sulfide)",
+            "Oral antifungal meds"
+        ],
+        "natural_remedies": [
+            "Selsun Blue shampoo as body wash",
+            "Tea tree oil"
+        ],
+        "lifestyle_tips": [
+            "Avoid excessive heat or sweating",
+            "Use antifungal soaps"
+        ],
+        "recommended_ingredients": [
+            "Ketoconazole",
+            "Selenium Sulfide",
+            "Zinc Pyrithione"
+        ]
+    },
+    {
+        "problem": "Onychomycosis (Nail Fungus)",
+        "description": "A fungal infection of the fingernails or toenails.",
+        "symptoms": [
+            "Thickened nails",
+            "Whitish to yellow-brown discoloration",
+            "Brittle, crumbly or ragged nails",
+            "Distorted shape",
+            "Debris building up under the nail"
+        ],
+        "medical_solutions": [
+            "Oral antifungal drugs (Terbinafine, Itraconazole)",
+            "Medicated nail lacquer",
+            "Nail removal surgery"
+        ],
+        "natural_remedies": [
+            "Vicks VapoRub",
+            "Tea tree oil",
+            "Snakeroot extract"
+        ],
+        "lifestyle_tips": [
+            "Keep hands and feet clean and dry",
+            "Trim nails straight across",
+            "Wear breathable socks",
+            "Don't go barefoot in public areas"
+        ],
+        "recommended_ingredients": [
+            "Terbinafine",
+            "Ciclopirox",
+            "Efinaconazole"
+        ]
+    },
+    {
+        "problem": "Herpes Simplex (Cold Sores)",
+        "description": "A viral infection caused by the herpes simplex virus.",
+        "symptoms": [
+            "Small, painful, fluid-filled blisters",
+            "Tingling or burning sensation before blisters appear",
+            "Itching"
+        ],
+        "medical_solutions": [
+            "Antiviral creams (Acyclovir, Penciclovir)",
+            "Oral antiviral meds (Valacyclovir)"
+        ],
+        "natural_remedies": [
+            "L-lysine supplements",
+            "Propolis",
+            "Lemon balm"
+        ],
+        "lifestyle_tips": [
+            "Avoid sharing utensils or lip balm",
+            "Manage stress",
+            "Avoid triggers like sun exposure"
+        ],
+        "recommended_ingredients": [
+            "Acyclovir",
+            "Docosanol"
+        ]
+    },
+    {
+        "problem": "Herpes Zoster (Shingles)",
+        "description": "A viral infection that causes a painful rash.",
+        "symptoms": [
+            "Pain, burning, numbness or tingling",
+            "Sensitivity to touch",
+            "A red rash that begins a few days after the pain",
+            "Fluid-filled blisters that break open and crust over",
+            "Itching"
+        ],
+        "medical_solutions": [
+            "Antiviral drugs",
+            "Pain relievers",
+            "Calamine lotion"
+        ],
+        "natural_remedies": [
+            "Cool baths",
+            "Wet compresses"
+        ],
+        "lifestyle_tips": [
+            "Get vaccinated if eligible",
+            "Keep the rash covered",
+            "Avoid touching the blisters"
+        ],
+        "recommended_ingredients": [
+            "Acyclovir",
+            "Valacyclovir",
+            "Capsaicin"
+        ]
+    },
+    {
+        "problem": "Ichthyosis Vulgaris",
+        "description": "An inherited or acquired skin condition that occurs when the skin doesn't shed its dead skin cells.",
+        "symptoms": [
+            "Dry, scaly skin",
+            "Fine, tile-like scales",
+            "Scales colored white, dirty gray or brown",
+            "Painful cracks in skin"
+        ],
+        "medical_solutions": [
+            "Retinoids",
+            "Alpha hydroxy acids (Lactic acid, Glycolic acid)"
+        ],
+        "natural_remedies": [
+            "Warm water soaks",
+            "Using a loofah gently",
+            "Coconut oil"
+        ],
+        "lifestyle_tips": [
+            "Apply moisturizer while skin is damp",
+            "Use a humidifier",
+            "Avoid harsh detergents"
+        ],
+        "recommended_ingredients": [
+            "Urea",
+            "Lactic Acid",
+            "Salicylic Acid",
+            "Glycerin"
+        ]
+    },
+    {
+        "problem": "Keratosis Pilaris (Chicken Skin)",
+        "description": "A common, harmless skin condition that causes dry, rough patches and tiny bumps, usually on upper arms, thighs, cheeks or buttocks.",
+        "symptoms": [
+            "Painless tiny bumps",
+            "Dry, rough skin in the area of the bumps",
+            "Sandpaper-like feel"
+        ],
+        "medical_solutions": [
+            "Creams to remove dead skin cells (AHAs, Salicylic acid)",
+            "Creams to prevent plugged follicles (Retinoids)"
+        ],
+        "natural_remedies": [
+            "Gentle exfoliation",
+            "Coconut oil",
+            "Warm (not hot) baths"
+        ],
+        "lifestyle_tips": [
+            "Don't pick or scrub the bumps",
+            "Use mild soaps",
+            "Pat skin dry gently"
+        ],
+        "recommended_ingredients": [
+            "Salicylic Acid",
+            "Lactic Acid",
+            "Urea",
+            "Retinol"
+        ]
+    },
+    {
+        "problem": "Actinic Keratosis",
+        "description": "A rough, scaly patch on the skin that develops from years of sun exposure.",
+        "symptoms": [
+            "Rough, dry or scaly patch of skin",
+            "Flat to slightly raised patch or bump",
+            "Hard, wart-like surface in some cases",
+            "Itching or burning"
+        ],
+        "medical_solutions": [
+            "Cryotherapy",
+            "Curettage",
+            "Laser therapy",
+            "Photodynamic therapy",
+            "Topical creams (Fluorouracil, Imiquimod)"
+        ],
+        "natural_remedies": [
+            "None (pre-cancerous, requires medical monitoring)"
+        ],
+        "lifestyle_tips": [
+            "Strict sun protection",
+            "Wear wide-brimmed hats",
+            "Regular skin checks by a dermatologist"
+        ],
+        "recommended_ingredients": [
+            "Sunscreen (SPF 50+)",
+            "Niacinamide"
+        ]
+    },
+    {
+        "problem": "Molluscum Contagiosum",
+        "description": "A viral skin infection that results in round, firm, painless bumps.",
+        "symptoms": [
+            "Raised, round, flesh-colored bumps",
+            "Small bumps (2-5mm)",
+            "Indentation or dot in the center",
+            "Can become red and inflamed"
+        ],
+        "medical_solutions": [
+            "Cryotherapy",
+            "Curettage",
+            "Cantharidin (beetle juice) applied by a doctor",
+            "Topical creams (Imiquimod)"
+        ],
+        "natural_remedies": [
+            "Tea tree oil",
+            "Apple cider vinegar (use with caution)"
+        ],
+        "lifestyle_tips": [
+            "Avoid scratching or picking",
+            "Don't share towels or razors",
+            "Cover bumps with bandages to prevent spread"
+        ],
+        "recommended_ingredients": [
+            "Benzoyl Peroxide",
+            "Salicylic Acid"
+        ]
+    },
+    {
+        "problem": "Pityriasis Rosea",
+        "description": "A common skin condition that causes a temporary rash of raised, red, scaly patches on the body.",
+        "symptoms": [
+            "Herald patch (a large, single scaly patch)",
+            "Smaller patches on the back or chest (Christmas tree pattern)",
+            "Itching"
+        ],
+        "medical_solutions": [
+            "Antihistamines for itching",
+            "Corticosteroids",
+            "Acyclovir in some cases",
+            "Light therapy"
+        ],
+        "natural_remedies": [
+            "Lukewarm baths",
+            "Oatmeal baths",
+            "Natural sunlight in moderation"
+        ],
+        "lifestyle_tips": [
+            "Wear loose clothing",
+            "Avoid irritating soaps",
+            "The rash usually clears on its own in 6-12 weeks"
+        ],
+        "recommended_ingredients": [
+            "Pramoxine (for itching)",
+            "Calamine"
+        ]
+    },
+    {
+        "problem": "Lichen Sclerosus",
+        "description": "A chronic inflammatory skin condition that most often affects the genital and anal areas.",
+        "symptoms": [
+            "Small, white, shiny patches",
+            "Itching (can be severe)",
+            "Bruising or tearing of the skin",
+            "Thin, wrinkled skin"
+        ],
+        "medical_solutions": [
+            "Highly potent topical corticosteroids",
+            "Calcineurin inhibitors",
+            "Ultraviolet light treatment"
+        ],
+        "natural_remedies": [
+            "None (requires medical treatment to prevent scarring)"
+        ],
+        "lifestyle_tips": [
+            "Avoid tight clothing",
+            "Use gentle, fragrance-free cleansers",
+            "Pat dry gently after bathing"
+        ],
+        "recommended_ingredients": [
+            "Clobetasol Propionate",
+            "Petrolatum"
+        ]
+    },
+    {
+        "problem": "Bullous Pemphigoid",
+        "description": "A rare skin condition that causes large, fluid-filled blisters.",
+        "symptoms": [
+            "Large, firm, fluid-filled blisters",
+            "Itching",
+            "Redness or hive-like rash around blisters",
+            "Mouth sores (rare)"
+        ],
+        "medical_solutions": [
+            "Corticosteroids (topical or oral)",
+            "Immunosuppressants",
+            "Antibiotics (Tetracyclines)"
+        ],
+        "natural_remedies": [
+            "None (serious autoimmune condition)"
+        ],
+        "lifestyle_tips": [
+            "Avoid sun exposure to affected areas",
+            "Keep blisters clean to avoid infection"
+        ],
+        "recommended_ingredients": [
+            "Corticosteroids"
+        ]
+    },
+    {
+        "problem": "Pemphigus Vulgaris",
+        "description": "A rare, serious autoimmune disease that causes painful blisters on the skin and mucous membranes.",
+        "symptoms": [
+            "Painful blisters that start in the mouth or on the skin",
+            "Blisters that rupture easily, leaving raw sores",
+            "Oozing and crusting"
+        ],
+        "medical_solutions": [
+            "High-dose Corticosteroids",
+            "Immunosuppressants (Azathioprine)",
+            "Biologics (Rituximab)"
+        ],
+        "natural_remedies": [
+            "None (life-threatening without treatment)"
+        ],
+        "lifestyle_tips": [
+            "Maintain high standards of hygiene",
+            "Avoid spicy or acidic foods if mouth is affected"
+        ],
+        "recommended_ingredients": [
+            "Corticosteroids",
+            "Rituximab"
+        ]
+    },
+    {
+        "problem": "Dermatitis Herpetiformis",
+        "description": "A chronic, intensely itchy skin rash made up of bumps and blisters, often associated with celiac disease.",
+        "symptoms": [
+            "Extremely itchy bumps or blisters",
+            "Symmetrical distribution (both elbows, both knees)",
+            "Burning sensation"
+        ],
+        "medical_solutions": [
+            "Dapsone (antibiotic/anti-inflammatory)",
+            "Strict gluten-free diet"
+        ],
+        "natural_remedies": [
+            "Gluten-free diet is the primary natural management"
+        ],
+        "lifestyle_tips": [
+            "Avoid all gluten (wheat, barley, rye)",
+            "Use cool compresses for itching",
+            "Don't scratch"
+        ],
+        "recommended_ingredients": [
+            "Calamine",
+            "Hydrocortisone (short-term)"
+        ]
+    },
+    {
+        "problem": "Erythema Multiforme",
+        "description": "A skin reaction that can be triggered by an infection or another medicine.",
+        "symptoms": [
+            "Target-like lesions (bullseye rash)",
+            "Red patches",
+            "Itching",
+            "Sores in the mouth (in severe cases)"
+        ],
+        "medical_solutions": [
+            "Antihistamines",
+            "Pain relievers",
+            "Corticosteroids",
+            "Antivirals (if triggered by herpes)"
+        ],
+        "natural_remedies": [
+            "Cool compresses",
+            "Aloe vera"
+        ],
+        "lifestyle_tips": [
+            "Identify the trigger (e.g., a specific medication)",
+            "Maintain good hygiene"
+        ],
+        "recommended_ingredients": [
+            "Antihistamines",
+            "Aloe Vera"
+        ]
+    },
+    {
+        "problem": "Stevens-Johnson Syndrome / Toxic Epidermal Necrolysis",
+        "description": "Rares, serious disorders of the skin and mucous membranes, usually triggered by a medication.",
+        "symptoms": [
+            "Flu-like symptoms",
+            "Painful red or purplish rash that spreads",
+            "Blisters on skin and mucous membranes",
+            "Skin peeling in large sheets"
+        ],
+        "medical_solutions": [
+            "Hospitalization (often in a burn unit)",
+            "IV fluids",
+            "Wound care",
+            "Pain management",
+            "Corticosteroids or IVIG"
+        ],
+        "natural_remedies": [
+            "None (emergency medical condition)"
+        ],
+        "lifestyle_tips": [
+            "Never take the triggering medication again",
+            "Wear a medical alert bracelet"
+        ],
+        "recommended_ingredients": [
+            "None (hospital care only)"
+        ]
+    },
+    {
+        "problem": "Granuloma Annulare",
+        "description": "A chronic skin condition that consists of raised, reddish or skin-colored bumps that form a ring pattern.",
+        "symptoms": [
+            "Raised, skin-colored or red bumps",
+            "Ring pattern, usually on hands or feet",
+            "Usually no itching or pain"
+        ],
+        "medical_solutions": [
+            "Corticosteroid creams or injections",
+            "Freezing (Cryotherapy)",
+            "Light therapy"
+        ],
+        "natural_remedies": [
+            "Vitamin E (topical)",
+            "Aloe vera"
+        ],
+        "lifestyle_tips": [
+            "Most cases resolve on their own without treatment",
+            "Protect skin from injury"
+        ],
+        "recommended_ingredients": [
+            "Hydrocortisone",
+            "Vitamin E"
+        ]
+    },
+    {
+        "problem": "Pyoderma Gangrenosum",
+        "description": "A rare, inflammatory skin disorder that causes large, painful sores to develop on the skin.",
+        "symptoms": [
+            "Small red bump that quickly turns into a large, painful ulcer",
+            "Ulcer has a purple or blue border",
+            "Pain is severe"
+        ],
+        "medical_solutions": [
+            "High-dose Corticosteroids",
+            "Immunosuppressants (Ciclosporin)",
+            "Biologics",
+            "Wound care"
+        ],
+        "natural_remedies": [
+            "None (requires aggressive medical treatment)"
+        ],
+        "lifestyle_tips": [
+            "Avoid skin injury (Pathergy)",
+            "Manage underlying conditions like IBD",
+            "Keep wounds clean"
+        ],
+        "recommended_ingredients": [
+            "Tacrolimus ointment (sometimes used)"
+        ]
+    },
+    {
+        "problem": "Acanthosis Nigricans",
+        "description": "A skin condition characterized by dark, velvety patches in body folds and creases.",
+        "symptoms": [
+            "Dark, thick, velvety skin in armpits, groin or neck",
+            "Itching or odor in the affected area"
+        ],
+        "medical_solutions": [
+            "Treating the underlying cause (e.g., weight loss, diabetes management)",
+            "Retinoids",
+            "Urea or Lactic acid creams"
+        ],
+        "natural_remedies": [
+            "Weight management through diet and exercise"
+        ],
+        "lifestyle_tips": [
+            "Monitor blood sugar levels",
+            "Maintain a healthy weight",
+            "Use gentle exfoliation"
+        ],
+        "recommended_ingredients": [
+            "Retinol",
+            "Salicylic Acid",
+            "Urea",
+            "Lactic Acid"
+        ]
+    },
+    {
+        "problem": "Xeroderma Pigmentosum",
+        "description": "A rare inherited condition in which there is an extreme sensitivity to ultraviolet (UV) rays from sunlight.",
+        "symptoms": [
+            "Severe sunburn after minimal sun exposure",
+            "Development of many freckles at an early age",
+            "High risk of skin cancers",
+            "Dry skin"
+        ],
+        "medical_solutions": [
+            "Regular dermatologist checkups",
+            "Surgical removal of skin growths"
+        ],
+        "natural_remedies": [
+            "Total UV avoidance is essential"
+        ],
+        "lifestyle_tips": [
+            "Wear UV-protective clothing/glasses",
+            "Apply broad-spectrum sunscreen even indoors",
+            "Avoid outdoor activities during daylight"
+        ],
+        "recommended_ingredients": [
+            "Physical Sunscreens (Zinc Oxide, Titanium Dioxide)"
+        ]
+    },
+    {
+        "problem": "Epidermolysis Bullosa",
+        "description": "A group of rare diseases that cause fragile, blistering skin.",
+        "symptoms": [
+            "Blistering of the skin from minor injury or friction",
+            "Blisters in the mouth/throat",
+            "Thickened skin on palms/soles"
+        ],
+        "medical_solutions": [
+            "Wound care",
+            "Surgery for complications",
+            "Pain management",
+            "Antibiotics for secondary infections"
+        ],
+        "natural_remedies": [
+            "None (genetic condition requiring specialized care)"
+        ],
+        "lifestyle_tips": [
+            "Wear soft, non-binding clothing",
+            "Avoid friction on the skin",
+            "Manage temperature to reduce sweating"
+        ],
+        "recommended_ingredients": [
+            "Petrolatum",
+            "Silicone dressings"
+        ]
+    },
+    {
+        "problem": "Discoid Lupus Erythematosus",
+        "description": "A chronic skin condition of sores with inflammation and scarring favoring the face, ears, and scalp.",
+        "symptoms": [
+            "Red, scaly, disk-shaped patches",
+            "Scarring hair loss (alopecia)",
+            "Skin discoloration",
+            "Sensitivity to light"
+        ],
+        "medical_solutions": [
+            "Topical corticosteroids",
+            "Antimalarial drugs (Hydroxychloroquine)",
+            "Immunosuppressants"
+        ],
+        "natural_remedies": [
+            "None (requires medical management)"
+        ],
+        "lifestyle_tips": [
+            "STRICT sun protection",
+            "Avoid smoking",
+            "Regular monitoring for systemic lupus"
+        ],
+        "recommended_ingredients": [
+            "Sunscreen (SPF 50+)"
+        ]
+    },
+    {
+        "problem": "Scleroderma (Localized)",
+        "description": "A group of rare diseases that involve the hardening and tightening of the skin and connective tissues.",
+        "symptoms": [
+            "Hard, thickening patches of skin",
+            "Skin that looks shiny",
+            "Movement may be restricted if over a joint"
+        ],
+        "medical_solutions": [
+            "Corticosteroid creams",
+            "Light therapy",
+            "Methotrexate for severe cases"
+        ],
+        "natural_remedies": [
+            "Physical therapy to maintain flexibility",
+            "Moisturizing with rich oils"
+        ],
+        "lifestyle_tips": [
+            "Stay active",
+            "Protect skin from cold",
+            "Avoid smoking"
+        ],
+        "recommended_ingredients": [
+            "Lanolin",
+            "Vitamin E",
+            "Shea Butter"
+        ]
+    },
+    {
+        "problem": "Dermatomyositis",
+        "description": "An uncommon inflammatory disease marked by muscle weakness and a distinctive skin rash.",
+        "symptoms": [
+            "Violet-colored or dusky red rash on face, eyelids, knuckles, elbows",
+            "Muscle weakness",
+            "Difficulty swallowing"
+        ],
+        "medical_solutions": [
+            "Corticosteroids",
+            "Immunosuppressants",
+            "Rituximab",
+            "Physical therapy"
+        ],
+        "natural_remedies": [
+            "None (serious inflammatory disease)"
+        ],
+        "lifestyle_tips": [
+            "Rest when tired",
+            "Sun protection (as it can trigger the rash)",
+            "Follow a healthy diet"
+        ],
+        "recommended_ingredients": [
+            "Sunscreen"
+        ]
+    },
+    {
+        "problem": "Cherry Angioma",
+        "description": "Bright red, circular or oval skin growths caused by broken blood vessels.",
+        "symptoms": [
+            "Small, bright red bumps",
+            "Usually painless",
+            "Can bleed if scratched"
+        ],
+        "medical_solutions": [
+            "Electrocautery",
+            "Cryosurgery",
+            "Laser therapy"
+        ],
+        "natural_remedies": [
+            "None (benign, but requires professional removal if desired)"
+        ],
+        "lifestyle_tips": [
+            "Avoid scratching or picking",
+            "Usually harmless and doesn't require treatment"
+        ],
+        "recommended_ingredients": [
+            "None"
+        ]
+    },
+    {
+        "problem": "Dermatofibroma",
+        "description": "Common benign (non-cancerous) fibrous skin growths.",
+        "symptoms": [
+            "Flesh-colored to reddish-brown bump",
+            "Firm to the touch",
+            "Dimples inward when pinched"
+        ],
+        "medical_solutions": [
+            "Surgical excision",
+            "Cryosurgery",
+            "Usually no treatment needed"
+        ],
+        "natural_remedies": [
+            "None"
+        ],
+        "lifestyle_tips": [
+            "Avoid irritating the growth by shaving over it",
+            "Harmless unless painful or growing"
+        ],
+        "recommended_ingredients": [
+            "None"
+        ]
+    },
+    {
+        "problem": "Lipoma",
+        "description": "A slow-growing, fatty lump that's most often situated between your skin and the underlying muscle layer.",
+        "symptoms": [
+            "Soft, fatty lump",
+            "Moves easily with slight finger pressure",
+            "Usually small but can grow"
+        ],
+        "medical_solutions": [
+            "Surgical removal",
+            "Liposuction"
+        ],
+        "natural_remedies": [
+            "None"
+        ],
+        "lifestyle_tips": [
+            "Generally harmless",
+            "See a doctor if it becomes painful or grows rapidly"
+        ],
+        "recommended_ingredients": [
+            "None"
+        ]
+    },
+    {
+        "problem": "Milia",
+        "description": "Small, dome-shaped bumps with a white or yellow appearance.",
+        "symptoms": [
+            "Small white/yellow bumps on face",
+            "Firm to the touch",
+            "Painless"
+        ],
+        "medical_solutions": [
+            "De-roofing by a professional",
+            "Retinoids",
+            "Chemical peels"
+        ],
+        "natural_remedies": [
+            "Gentle exfoliation",
+            "Honey mask"
+        ],
+        "lifestyle_tips": [
+            "Do not squeeze or pick",
+            "Use non-comedogenic products"
+        ],
+        "recommended_ingredients": [
+            "Salicylic Acid",
+            "Retinol"
+        ]
+    },
+    {
+        "problem": "Erysipelas",
+        "description": "A bacterial skin infection involving the upper dermis and superficial lymphatics.",
+        "symptoms": [
+            "Shiny, red, raised, and warm patch on skin",
+            "Distinct edge to the rash",
+            "Fever and chills",
+            "Pain and tenderness"
+        ],
+        "medical_solutions": [
+            "Antiobiotics (Penicillin, Cephalosporins)",
+            "Elevation of the affected area",
+            "Wound care"
+        ],
+        "natural_remedies": [
+            "Cool compresses",
+            "Rest"
+        ],
+        "lifestyle_tips": [
+            "Treat conditions like athlete's foot to prevent entry points",
+            "Manage skin dryness"
+        ],
+        "recommended_ingredients": [
+            "Antibiotics"
+        ]
+    },
+    {
+        "problem": "Tinea Pedis (Athlete’s Foot)",
+        "description": "A fungal infection that usually begins between the toes.",
+        "symptoms": [
+            "Itchy, scaly rash",
+            "Stinging or burning",
+            "Blisters",
+            "Cracked, peeling skin"
+        ],
+        "medical_solutions": [
+            "Antifungal creams (Terbinafine, Clotrimazole)",
+            "Oral antifungal meds for severe cases"
+        ],
+        "natural_remedies": [
+            "Tea tree oil",
+            "Vinegar soaks"
+        ],
+        "lifestyle_tips": [
+            "Keep feet dry",
+            "Change socks daily",
+            "Don't go barefoot in public pools/gyms"
+        ],
+        "recommended_ingredients": [
+            "Terbinafine",
+            "Clotrimazole",
+            "Tolnaftate"
+        ]
+    },
+    {
+        "problem": "Tinea Cruris (Jock Itch)",
+        "description": "A fungal infection in the skin of the genitals, inner thighs, and buttocks.",
+        "symptoms": [
+            "Red, itchy, ring-shaped rash",
+            "Burning sensation",
+            "Flaking or peeling skin"
+        ],
+        "medical_solutions": [
+            "Antifungal creams",
+            "Prescription strength antifungals"
+        ],
+        "natural_remedies": [
+            "Tea tree oil",
+            "Keeping area clean/dry"
+        ],
+        "lifestyle_tips": [
+            "Dry the groin area thoroughly after bathing",
+            "Wear clean, loose cotton underwear"
+        ],
+        "recommended_ingredients": [
+            "Clotrimazole",
+            "Miconazole"
+        ]
+    },
+    {
+        "problem": "Pediculosis (Lice)",
+        "description": "Infestation by tiny wingless insects that live on human hair and skin.",
+        "symptoms": [
+            "Intense itching",
+            "Tickling feeling on scalp or body hair",
+            "Lice on scalp/body",
+            "Lice eggs (nits) on hair shafts"
+        ],
+        "medical_solutions": [
+            "Permethrin",
+            "Malathion",
+            "Ivermectin",
+            "Manual removal of nits"
+        ],
+        "natural_remedies": [
+            "Wet-combing",
+            "Olive oil (may help)"
+        ],
+        "lifestyle_tips": [
+            "Wash clothing/bedding in hot water",
+            "Seal non-washable items in plastic bags for 2 weeks",
+            "Avoid sharing hats/combs"
+        ],
+        "recommended_ingredients": [
+            "Permethrin",
+            "Pyrethrin"
+        ]
+    },
+    {
+        "problem": "Nummular Eczema",
+        "description": "A skin condition in which itchy, coin-shaped spots or patches appear on the skin.",
+        "symptoms": [
+            "Coin-shaped patches",
+            "Itchy, scaly or crusty skin",
+            "Weeping sores"
+        ],
+        "medical_solutions": [
+            "Corticosteroids",
+            "Oral antibiotics (if infected)",
+            "Phototherapy"
+        ],
+        "natural_remedies": [
+            "Tar preparations",
+            "Oatmeal baths"
+        ],
+        "lifestyle_tips": [
+            "Avoid harsh soaps",
+            "Apply moisturizer after bathing",
+            "Manage stress and environmental triggers"
+        ],
+        "recommended_ingredients": [
+            "Ceramides",
+            "Coal Tar",
+            "Urea"
+        ]
+    },
+    {
+        "problem": "Stasis Dermatitis",
+        "description": "Skin inflammation that develops in people with poor circulation.",
+        "symptoms": [
+            "Skin discoloration (red or brown)",
+            "Swelling in lower legs",
+            "Itching",
+            "Thickened or scaly skin",
+            "Open sores (ulcers)"
+        ],
+        "medical_solutions": [
+            "Compression stockings",
+            "Topical steriods",
+            "Treating underlying venous insufficiency"
+        ],
+        "natural_remedies": [
+            "Elevation of legs",
+            "Aloe vera"
+        ],
+        "lifestyle_tips": [
+            "Elevate legs above heart level frequently",
+            "Take short walks to improve circulation",
+            "Avoid sitting/standing for long periods"
+        ],
+        "recommended_ingredients": [
+            "Petrolatum",
+            "Zinc Oxide (for protection)"
+        ]
+    },
+    {
+        "problem": "Perioral Dermatitis",
+        "description": "An inflammatory rash that occurs around the mouth.",
+        "symptoms": [
+            "Small, red, itchy bumps around the mouth, nose or eyes",
+            "Skin may be scaly or dry",
+            "Burning or stinging sensation"
+        ],
+        "medical_solutions": [
+            "Stopping topical steroids (primary cause)",
+            "Oral or topical antibiotics (Metronidazole)",
+            "Pimecrolimus"
+        ],
+        "natural_remedies": [
+            "Gentle cleansing with water only",
+            "Aloe vera"
+        ],
+        "lifestyle_tips": [
+            "Avoid fluoride toothpaste for a while",
+            "Avoid heavy face creams/sunscreens",
+            "Identfy and avoid triggers"
+        ],
+        "recommended_ingredients": [
+            "Metronidazole",
+            "Azelaic Acid"
+        ]
+    },
+    {
+        "problem": "Keloid Scars",
+        "description": "Raised scars that grow much larger than the original injury.",
+        "symptoms": [
+            "Thick, raised, lumpy scar",
+            "Grows beyond the site of the original injury",
+            "Itching or tenderness",
+            "Red, pink or dark color"
+        ],
+        "medical_solutions": [
+            "Corticosteroid injections",
+            "Laser therapy",
+            "Surgical removal (high recurrence risk)",
+            "Silicone sheets"
+        ],
+        "natural_remedies": [
+            "Silicone gel/sheets",
+            "Onion extract gel"
+        ],
+        "lifestyle_tips": [
+            "Avoid unnecessary piercings or surgery if prone to keloids",
+            "Apply pressure to new scars"
+        ],
+        "recommended_ingredients": [
+            "Silicone",
+            "Allantoin",
+            "Heparin Sodium"
+        ]
+    },
+    {
+        "problem": "Hypertrophic Scars",
+        "description": "Raised scars that remain within the boundary of the original injury.",
+        "symptoms": [
+            "Raised, red, firm scar",
+            "Itchy or sensitive",
+            "Does NOT grow beyond the original wound"
+        ],
+        "medical_solutions": [
+            "Corticosteroid injections",
+            "Silicone sheeting",
+            "Laser therapy",
+            "Pressure therapy"
+        ],
+        "natural_remedies": [
+            "Silicone gel",
+            "Cocoa butter",
+            "Aloe vera"
+        ],
+        "lifestyle_tips": [
+            "Keep the scar protected from the sun",
+            "Massage the scar as it heals",
+            "Avoid tension on the wound"
+        ],
+        "recommended_ingredients": [
+            "Silicone",
+            "Vitamin E",
+            "Onion Extract"
+        ]
+    }
+]

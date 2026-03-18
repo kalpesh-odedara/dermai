@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional Dermatology Palette */
+
+    /* Base Colors */
+    --background: 0 0% 100%;
+    /* Pure White */
+    --foreground: 220 35% 20%;
+    /* Dark Charcoal/Navy for text */
+
+    /* Card & Popovers */
+    --card: 0 0% 100%;
+    --card-foreground: 220 35% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 35% 20%;
+
+    /* Primary: Deep Trust Navy */
+    --primary: 220 35% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Soft Grayish Blue */
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 220 35% 25%;
+
+    /* Muted: Neutral Gray */
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 50%;
+
+    /* Accent: Sophisticated Teal (Healing/Nature) */
+    --accent: 185 45% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Boarders & Inputs */
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 185 45% 40%;
+
+    --radius: 0.5rem;
+    /* Sharper, more professional radius */
+
+    /* Domain Specific */
+    --navy: 220 35% 25%;
+    --cyan: 185 45% 40%;
+    --cyan-light: 185 20% 96%;
+    --navy-light: 220 35% 96%;
+    --success: 158 64% 42%;
+    --warning: 40 90% 60%;
+
+    /* Effects */
+    --glass: 0 0% 100% / 0.9;
+    --glass-border: 220 15% 90% / 0.5;
+
+    /* Gradients - Subtle & Professional */
+    --gradient-primary: linear-gradient(135deg, hsl(220 35% 25%) 0%, hsl(220 35% 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(185 45% 40%) 0%, hsl(185 45% 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 98%) 0%, hsl(0 0% 100%) 100%);
+
+    /* Shadows - softer */
+    --shadow-sm: 0 1px 2px 0 hsl(220 35% 20% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 35% 20% / 0.05), 0 2px 4px -2px hsl(220 35% 20% / 0.05);
+    --shadow-lg: 0 10px 15px -3px hsl(220 35% 20% / 0.05), 0 4px 6px -4px hsl(220 35% 20% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 35% 20% / 0.05), 0 8px 10px -6px hsl(220 35% 20% / 0.05);
+    --shadow-glow: 0 0 30px hsl(185 45% 40% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 35% 20%;
+    --sidebar-primary: 220 35% 25%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 20% 96%;
+    --sidebar-accent-foreground: 220 35% 25%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 185 45% 40%;
+  }
+
+  .dark {
+    --background: 220 35% 10%;
+    --foreground: 220 20% 98%;
+
+    --card: 220 35% 14%;
+    --card-foreground: 220 20% 98%;
+
+    --popover: 220 35% 14%;
+    --popover-foreground: 220 20% 98%;
+
+    --primary: 185 45% 40%;
+    --primary-foreground: 220 35% 10%;
+
+    --secondary: 220 30% 20%;
+    --secondary-foreground: 220 20% 98%;
+
+    --muted: 220 30% 20%;
+    --muted-foreground: 220 20% 65%;
+
+    --accent: 185 45% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 220 20% 98%;
+
+    --border: 220 30% 20%;
+    --input: 220 30% 20%;
+    --ring: 185 45% 40%;
+
+    --glass: 220 35% 14% / 0.7;
+    --glass-border: 0 0% 100% / 0.1;
+
+    --sidebar-background: 220 35% 10%;
+    --sidebar-foreground: 220 20% 98%;
+    --sidebar-primary: 185 45% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 30% 20%;
+    --sidebar-accent-foreground: 220 20% 98%;
+    --sidebar-border: 220 30% 20%;
+    --sidebar-ring: 185 45% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-accent);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
