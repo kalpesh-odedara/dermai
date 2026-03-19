@@ -57,7 +57,7 @@ export const AdminLayout = () => {
 
     const fetchNotifications = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/admin/notifications");
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/notifications`);
             const data = await response.json();
             setNotifications(data);
         } catch (error) {
@@ -71,13 +71,13 @@ export const AdminLayout = () => {
             let body = {};
 
             if (notif.type === "Contact") {
-                endpoint = `http://localhost:5000/api/contacts/${notif.id}`;
+                endpoint = `${import.meta.env.VITE_API_URL}/api/contacts/${notif.id}`;
                 body = { status: "Read" };
             } else if (notif.type === "Feedback") {
-                endpoint = `http://localhost:5000/api/feedback/${notif.id}`;
+                endpoint = `${import.meta.env.VITE_API_URL}/api/feedback/${notif.id}`;
                 body = { status: "Read" };
             } else if (notif.type === "Appointment") {
-                endpoint = `http://localhost:5000/api/appointments/${notif.id}`;
+                endpoint = `${import.meta.env.VITE_API_URL}/api/appointments/${notif.id}`;
                 body = { status: "Confirmed" };
             }
 

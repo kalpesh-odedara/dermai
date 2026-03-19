@@ -24,7 +24,7 @@ const AdminLogins = () => {
 
     const fetchLogins = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/user-logins");
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/user-logins`);
             const result = await response.json();
             setData(result);
         } catch (error) {

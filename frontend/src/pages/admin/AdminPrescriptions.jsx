@@ -41,7 +41,7 @@ const AdminPrescriptions = () => {
 
     const fetchPrescriptions = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/prescriptions");
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/prescriptions`);
             const result = await response.json();
             setData(result);
         } catch (error) {
@@ -54,7 +54,7 @@ const AdminPrescriptions = () => {
 
     const deletePrescription = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/prescriptions/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/prescriptions/${id}`, {
                 method: "DELETE"
             });
 

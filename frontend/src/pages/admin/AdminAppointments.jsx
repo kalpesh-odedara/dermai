@@ -43,7 +43,7 @@ const AdminAppointments = () => {
 
     const fetchAppointments = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/appointments");
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`);
             const result = await response.json();
             setData(result);
         } catch (error) {
@@ -56,7 +56,7 @@ const AdminAppointments = () => {
 
     const updateStatus = async (id, newStatus) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/appointments/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments/${id}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ status: newStatus })
@@ -76,7 +76,7 @@ const AdminAppointments = () => {
 
     const deleteAppointment = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/appointments/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments/${id}`, {
                 method: "DELETE"
             });
 

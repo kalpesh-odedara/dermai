@@ -45,7 +45,8 @@ const AdminFeedback = () => {
 
     const fetchFeedback = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/feedback");
+            const API_URL = import.meta.env.VITE_API_URL;
+            const response = await fetch(`${API_URL}/api/feedback`);
             const result = await response.json();
             setData(result);
         } catch (error) {
@@ -66,7 +67,7 @@ const AdminFeedback = () => {
             // Reusing existing patterns if DELETE route exists, otherwise just local filter for now
             // Checking server.js I didn't see a DELETE /api/feedback route, but I'll add one if needed.
             // For now, let's keep it consistent with the existing admin pages.
-            const response = await fetch(`http://localhost:5000/api/feedback/${id}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/feedback/${id}`, {
                 method: "DELETE",
             });
             if (response.ok) {

@@ -58,7 +58,7 @@ const Appointment = () => {
     setIsSearchingStatus(true);
     try {
       // First, try a quick ping to see if the server is actually the updated version
-      const pingResponse = await fetch("http://localhost:5000/api/ping-status").catch(() => null);
+      const pingResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/ping-status`).catch(() => null);
       if (!pingResponse || !pingResponse.ok) {
         console.error("Ping failed. Server might not be running or is an old version.");
         toast.error("Backend server error. Please restart it!");
@@ -66,7 +66,7 @@ const Appointment = () => {
         return;
       }
 
-      const url = `http://localhost:5000/api/check-status/${encodeURIComponent(statusEmail)}`;
+      const url = `${import.meta.env.VITE_API_URL}/api/check-status/${encodeURIComponent(statusEmail)}`;
       console.log("Calling status check URL:", url);
       const response = await fetch(url);
       if (response.ok) {
@@ -140,7 +140,7 @@ const Appointment = () => {
   const handleSubmit = async () => {
     if (validateStep(1) && validateStep(2) && validateStep(3)) {
       try {
-        const response = await fetch("http://localhost:5000/api/appointments", {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointments`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData)

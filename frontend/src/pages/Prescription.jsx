@@ -81,7 +81,7 @@ const Prescription = () => {
 
     setIsAnalyzing(true);
     try {
-      const response = await fetch("http://localhost:5000/api/analyze-skin", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/analyze-skin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ image: previewImage })
@@ -94,7 +94,7 @@ const Prescription = () => {
 
         // Store in Admin Panel / Database
         try {
-          await fetch("http://localhost:5000/api/prescriptions", {
+          await fetch(`${import.meta.env.VITE_API_URL}/api/prescriptions`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
