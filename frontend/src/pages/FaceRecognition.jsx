@@ -310,7 +310,6 @@ const FaceRecognition = () => {
                     faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL),
                     faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL),
                     faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL),
-                    faceapi.nets.faceRecognitionNet.loadFromUri(MODEL_URL),
                 ]);
                 if (!cancelled) {
                     setModelsLoaded(true);
@@ -487,10 +486,9 @@ const FaceRecognition = () => {
             }
 
             const result = await faceapi
-                .detectSingleFace(video, new faceapi.TinyFaceDetectorOptions({ inputSize: 416, scoreThreshold: 0.4 }))
+                .detectSingleFace(video, new faceapi.TinyFaceDetectorOptions({ inputSize: 320, scoreThreshold: 0.4 }))
                 .withFaceLandmarks()
-                .withFaceExpressions()
-                .withFaceDescriptor();
+                .withFaceExpressions();
 
             if (!result) {
                 setError("No face detected. Please position your face clearly in the camera and try again.");
@@ -498,33 +496,8 @@ const FaceRecognition = () => {
                 return;
             }
 
-            // --- Session Persistence Logic ---
-            // If we've seen this face before, reuse its results for consistency
-            const threshold = 0.5;
-            const existingMatch = knownFacesRef.current.find(meta => 
-                faceapi.euclideanDistance(result.descriptor, meta.descriptor) < threshold
-            );
-
-            let moodResult, skinResult;
-
-            if (existingMatch) {
-                console.log("♻️ Consistent scan: Reusing previous results for this face");
-                moodResult = { mood: existingMatch.mood, confidence: existingMatch.confidence };
-                skinResult = { type: existingMatch.skinType, confidence: existingMatch.skinConfidence };
-            } else {
-                // New face or fresh analysis
-                moodResult = determineMood(result.expressions);
-                skinResult = analyzeSkinType(video, result);
-                
-                // Cache for next time
-                knownFacesRef.current.push({
-                    descriptor: result.descriptor,
-                    mood: moodResult.mood,
-                    skinType: skinResult.type,
-                    confidence: moodResult.confidence,
-                    skinConfidence: skinResult.confidence
-                });
-            }
+            const moodResult = determineMood(result.expressions);
+            const skinResult = analyzeSkinType(video, result);
 
             console.log("🎯 Mood analysis:", moodResult);
             console.log("🧪 Skin analysis:", skinResult);

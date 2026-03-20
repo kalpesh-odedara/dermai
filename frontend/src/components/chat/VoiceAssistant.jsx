@@ -103,12 +103,13 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
         // Check functional commands
         if (cleanText.includes("chatbot") || cleanText.includes("chat") || cleanText.includes("help") || cleanText.includes("ai doctor")) {
             setStatus("success");
+            speak("Here is your result");
             setTimeout(() => {
                 window.dispatchEvent(new CustomEvent('openChatbot'));
                 onClose();
                 setTranscript("");
                 setStatus("idle");
-            }, 1000);
+            }, 1500);
             return;
         }
 
@@ -116,12 +117,13 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
             const matchedKeyword = nav.keywords.find(keyword => cleanText.includes(keyword));
             if (matchedKeyword) {
                 setStatus("success");
+                speak("Here is your result");
                 setTimeout(() => {
                     navigate(nav.route);
                     onClose();
                     setTranscript("");
                     setStatus("idle");
-                }, 1000);
+                }, 1500);
                 return;
             }
         }
