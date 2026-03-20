@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mic, MicOff, X, Navigation, Sparkles, Command, ShieldCheck, Cpu } from "lucide-react";
@@ -32,6 +32,8 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
     const [recognition, setRecognition] = useState(null);
     const [isSupported, setIsSupported] = useState(true);
     const [status, setStatus] = useState("idle"); // idle, listening, processing, success, error
+    const errorTimeoutRef = useRef(null);
+    const lastEvaluatedRef = useRef("");
 
     useEffect(() => {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -46,17 +48,23 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
         rec.lang = "en-US";
 
         rec.onresult = (event) => {
-            let currentInterim = "";
-            for (let i = event.resultIndex; i < event.results.length; ++i) {
+            let finalStr = "";
+            let interimStr = "";
+            for (let i = 0; i < event.results.length; ++i) {
                 if (event.results[i].isFinal) {
-                    const result = event.results[i][0].transcript.toLowerCase();
-                    setTranscript((prev) => prev + result + " ");
-                    handleVoiceCommand(result);
+                    finalStr += event.results[i][0].transcript.toLowerCase() + " ";
                 } else {
-                    currentInterim += event.results[i][0].transcript;
+                    interimStr += event.results[i][0].transcript;
                 }
             }
-            setInterimTranscript(currentInterim);
+            
+            setTranscript(finalStr);
+            setInterimTranscript(interimStr);
+            
+            if (finalStr.trim() !== "" && finalStr !== lastEvaluatedRef.current) {
+                lastEvaluatedRef.current = finalStr;
+                handleVoiceCommand(finalStr);
+            }
         };
 
         rec.onerror = (event) => {
@@ -100,6 +108,11 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
     const handleVoiceCommand = (text) => {
         const cleanText = text.toLowerCase().trim();
 
+        if (errorTimeoutRef.current) {
+            clearTimeout(errorTimeoutRef.current);
+            errorTimeoutRef.current = null;
+        }
+
         // Check functional commands
         if (cleanText.includes("chatbot") || cleanText.includes("chat") || cleanText.includes("help") || cleanText.includes("ai doctor")) {
             setStatus("success");
@@ -141,12 +154,17 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
             }
         }
 
-        // Out of domain query
-        setStatus("error");
-        speak("this is out of dermacare information please find info related to us");
-        setTimeout(() => {
-            setStatus("idle");
-        }, 3000);
+        // Out of domain query - Delayed to prevent premature voice fire when user pauses
+        setStatus("processing");
+        errorTimeoutRef.current = setTimeout(() => {
+            if (status !== "success") {
+                setStatus("error");
+                speak("this is out of dermacare information please find info related to us");
+                setTimeout(() => {
+                    setStatus("idle");
+                }, 3000);
+            }
+        }, 1500);
     };
 
     const toggleListening = useCallback(() => {
@@ -156,9 +174,11 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
             recognition.stop();
             setIsListening(false);
             setStatus("idle");
+            if (errorTimeoutRef.current) clearTimeout(errorTimeoutRef.current);
         } else {
             setTranscript("");
             setInterimTranscript("");
+            lastEvaluatedRef.current = "";
             recognition.start();
             setIsListening(true);
             setStatus("listening");
