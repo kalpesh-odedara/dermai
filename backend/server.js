@@ -13,6 +13,7 @@ const Feedback = require('./models/Feedback');
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const csv = require('csv-parser');
+const compression = require('compression');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -29,11 +30,14 @@ app.use(cors({
   },
   credentials: true
 }));
+app.use(compression());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 // Database Connection
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {
+  serverSelectionTimeoutMS: 5000, // Keep-alive and faster connection timeout
+})
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB connection error:', err));
 

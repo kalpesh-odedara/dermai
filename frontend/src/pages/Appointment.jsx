@@ -65,15 +65,6 @@ const Appointment = () => {
     }
     setIsSearchingStatus(true);
     try {
-      // First, try a quick ping to see if the server is actually the updated version
-      const pingResponse = await fetch(`${import.meta.env.VITE_API_URL}/api/ping-status`).catch(() => null);
-      if (!pingResponse || !pingResponse.ok) {
-        console.error("Ping failed. Server might not be running or is an old version.");
-        toast.error("Backend server error. Please restart it!");
-        setIsSearchingStatus(false);
-        return;
-      }
-
       const url = `${import.meta.env.VITE_API_URL}/api/check-status/${encodeURIComponent(statusEmail)}`;
       console.log("Calling status check URL:", url);
       const response = await fetch(url);

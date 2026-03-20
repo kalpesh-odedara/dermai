@@ -37,8 +37,8 @@ const Login = () => {
                 toast.success("Login successful! Welcome to DermaCare.");
                 localStorage.setItem("userAuthenticated", "true");
                 localStorage.setItem("userName", formData.name);
-                // Redirect to home or dashboard
-                setTimeout(() => navigate("/"), 1500);
+                // Redirect to home or dashboard immediately
+                navigate("/");
             } else {
                 toast.error("Failed to process login");
             }
