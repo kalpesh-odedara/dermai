@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { User, Calendar, Stethoscope, ChevronLeft, ChevronRight, Check, AlertCircle, Search, Clock, ShieldCheck, ClipboardList, HelpCircle, Plus, Minus } from "lucide-react";
@@ -32,6 +33,8 @@ const timeSlots = [
   "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM",
 ];
 const Appointment = () => {
+  const navigate = useNavigate();
+  const isAuthenticated = localStorage.getItem("userAuthenticated") === "true";
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -51,6 +54,11 @@ const Appointment = () => {
   const [isSearchingStatus, setIsSearchingStatus] = useState(false);
 
   const handleCheckStatus = async () => {
+    if (!isAuthenticated) {
+      toast.error("Please sign in to check your appointment status");
+      navigate("/login");
+      return;
+    }
     if (!statusEmail.trim()) {
       toast.error("Please enter your email");
       return;
@@ -127,6 +135,11 @@ const Appointment = () => {
   };
 
   const nextStep = () => {
+    if (currentStep === 1 && !isAuthenticated) {
+      toast.error("Please sign in to continue with your booking");
+      navigate("/login");
+      return;
+    }
     if (validateStep(currentStep)) {
       setCurrentStep((prev) => Math.min(prev + 1, 4));
     }

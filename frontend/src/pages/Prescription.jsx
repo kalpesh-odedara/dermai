@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { jsPDF } from "jspdf";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
@@ -49,6 +50,8 @@ const prescriptions = [
 ];
 
 const Prescription = () => {
+  const navigate = useNavigate();
+  const isAuthenticated = localStorage.getItem("userAuthenticated") === "true";
   const [selectedPrescription, setSelectedPrescription] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -94,6 +97,11 @@ const Prescription = () => {
   };
 
   const analyzeSkin = async () => {
+    if (!isAuthenticated) {
+      toast.error("Please sign in to analyze your skin");
+      navigate("/login");
+      return;
+    }
     if (!previewImage) return;
 
     setIsAnalyzing(true);

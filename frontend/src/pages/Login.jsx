@@ -147,12 +147,6 @@ const Login = () => {
                                 </Button>
                             </form>
 
-                            <div className="mt-8 pt-6 border-t border-primary/5 text-center relative z-10">
-                                <p className="text-muted-foreground text-sm">
-                                    Don't have an account?{" "}
-                                    <button className="text-primary font-semibold hover:underline">Create Account</button>
-                                </p>
-                            </div>
                         </div>
 
                         <div className="mt-8 flex items-center justify-center gap-2 text-muted-foreground text-sm">

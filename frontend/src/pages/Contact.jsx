@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare, CheckCircle } from "lucide-react";
@@ -29,12 +30,19 @@ const contactInfo = [
   },
 ];
 const Contact = () => {
+  const navigate = useNavigate();
+  const isAuthenticated = localStorage.getItem("userAuthenticated") === "true";
   const formRef = useRef(null);
   const isInView = useInView(formRef, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
   const [focused, setFocused] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isAuthenticated) {
+      toast.error("Please sign in to send a message");
+      navigate("/login");
+      return;
+    }
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),

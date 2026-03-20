@@ -63,14 +63,14 @@ const App = () => (
         {/* Public Login Route */}
         <Route path="/login" element={<Login />} />
 
-        {/* Protected User Routes */}
-        <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
-        <Route path="/about" element={<ProtectedRoute><About /></ProtectedRoute>} />
-        <Route path="/services" element={<ProtectedRoute><Services /></ProtectedRoute>} />
-        <Route path="/appointment" element={<ProtectedRoute><Appointment /></ProtectedRoute>} />
-        <Route path="/prescription" element={<ProtectedRoute><Prescription /></ProtectedRoute>} />
-        <Route path="/contact" element={<ProtectedRoute><Contact /></ProtectedRoute>} />
-        <Route path="/face-recognition" element={<ProtectedRoute><FaceRecognition /></ProtectedRoute>} />
+        {/* Public Routes (No longer hidden behind universal login) */}
+        <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/appointment" element={<Appointment />} />
+        <Route path="/prescription" element={<Prescription />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/face-recognition" element={<FaceRecognition />} />
 
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />

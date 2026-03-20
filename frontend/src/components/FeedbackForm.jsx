@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Star, Send, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 
 const FeedbackForm = () => {
+    const navigate = useNavigate();
+    const isAuthenticated = localStorage.getItem("userAuthenticated") === "true";
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -19,6 +22,11 @@ const FeedbackForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!isAuthenticated) {
+            toast.error("Please sign in to provide feedback");
+            navigate("/login");
+            return;
+        }
         if (formData.rating === 0) {
             toast.error("Please provide a rating");
             return;

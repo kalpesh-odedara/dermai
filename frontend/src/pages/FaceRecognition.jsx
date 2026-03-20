@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import * as faceapi from "face-api.js";
 import {
@@ -278,6 +279,8 @@ const MODEL_URL = "https://justadudewhohacks.github.io/face-api.js/models";
 
 // ── Component ──
 const FaceRecognition = () => {
+    const navigate = useNavigate();
+    const isAuthenticated = localStorage.getItem("userAuthenticated") === "true";
     const videoRef = useRef(null);
     const canvasRef = useRef(null);
     const streamRef = useRef(null);
@@ -326,6 +329,11 @@ const FaceRecognition = () => {
 
     // Start camera
     const startCamera = useCallback(async () => {
+        if (!isAuthenticated) {
+            alert("Please sign in to use Face Recognition");
+            navigate("/login");
+            return;
+        }
         try {
             setError("");
             const stream = await navigator.mediaDevices.getUserMedia({
@@ -461,6 +469,11 @@ const FaceRecognition = () => {
 
     // Capture & Analyze
     const captureAndAnalyze = async () => {
+        if (!isAuthenticated) {
+            alert("Please sign in to perform analysis");
+            navigate("/login");
+            return;
+        }
         if (!videoRef.current || !modelsLoaded) return;
         setAnalyzing(true);
         setError("");
