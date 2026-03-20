@@ -25,7 +25,8 @@ const prescriptionSchema = new mongoose.Schema({
   status: {
     type: String,
     enum: ['Active', 'Completed', 'Pending'],
-    default: 'Active'
+    default: 'Active',
+    index: true
   },
   accuracy: {
     type: String

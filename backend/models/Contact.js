@@ -6,8 +6,8 @@ const contactSchema = new mongoose.Schema({
   phone: { type: String },
   subject: { type: String, required: true },
   message: { type: String, required: true },
-  status: { type: String, default: 'New' },
-  createdAt: { type: Date, default: Date.now }
+  status: { type: String, default: 'New', index: true },
+  createdAt: { type: Date, default: Date.now, index: true }
 });
 
 module.exports = mongoose.model('Contact', contactSchema);

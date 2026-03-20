@@ -46,17 +46,17 @@ const About = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Images */}
-          <div className="relative h-[500px] lg:h-[600px]">
-            <motion.div style={{ y: y1 }} className="absolute top-0 left-0 w-3/4 h-3/4 rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative h-[350px] sm:h-[500px] lg:h-[600px] mb-8 lg:mb-0">
+            <motion.div style={{ y: y1 }} className="absolute top-0 left-0 w-[75%] h-[75%] sm:w-3/4 sm:h-3/4 rounded-3xl overflow-hidden shadow-2xl z-10">
               <img src={aboutDoctor} alt="Doctor consulting patient" className="w-full h-full object-cover" />
             </motion.div>
-            <motion.div style={{ y: y2 }} className="absolute bottom-0 right-0 w-2/3 h-2/3 rounded-3xl overflow-hidden shadow-2xl border-4 border-card">
+            <motion.div style={{ y: y2 }} className="absolute bottom-4 right-0 w-[65%] h-[65%] sm:w-2/3 sm:h-2/3 rounded-3xl overflow-hidden shadow-2xl border-4 border-card z-0">
               <img src={aboutTeam} alt="Medical team meeting" className="w-full h-full object-cover" />
             </motion.div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 rounded-2xl bg-accent flex items-center justify-center text-center p-4">
+            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-20 h-20 sm:w-32 sm:h-32 rounded-2xl bg-accent flex items-center justify-center text-center p-2 sm:p-4 z-20 shadow-xl">
               <div>
-                <span className="font-display text-3xl font-bold text-accent-foreground">25+</span>
-                <p className="text-accent-foreground/80 text-sm">Years of Excellence</p>
+                <span className="font-display text-lg sm:text-3xl font-bold text-accent-foreground">25+</span>
+                <p className="text-accent-foreground/80 text-[8px] sm:text-sm uppercase sm:capitalize leading-tight">Years of Excellence</p>
               </div>
             </div>
           </div>

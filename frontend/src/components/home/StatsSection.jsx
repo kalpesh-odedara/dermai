@@ -39,7 +39,7 @@ export const StatsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   return (<section ref={ref} className="py-20 gradient-primary">
     <div className="container mx-auto px-4 lg:px-8">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         {stats.map((stat, index) => (<motion.div key={stat.label} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: index * 0.1 }} className="text-center">
           <div className="w-16 h-16 rounded-2xl bg-primary-foreground/10 flex items-center justify-center mx-auto mb-4">
             <stat.icon className="w-8 h-8 text-accent" />

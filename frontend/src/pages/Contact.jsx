@@ -108,7 +108,7 @@ const Contact = () => {
 
             {/* Stylized Map Placeholder */}
             {/* Live Porbandar Map */}
-            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.4 }} className="relative h-[400px] rounded-3xl overflow-hidden border border-border bg-muted shadow-inner group">
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.4 }} className="relative h-[300px] sm:h-[400px] rounded-3xl overflow-hidden border border-border bg-muted shadow-inner group">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14781.986884021272!2d69.5898327!3d21.64451005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3956346eb617ed77%3A0xc3f949c869be9c11!2sPorbandar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 className="w-full h-full grayscale-[20%] contrast-[1.1] transition-all duration-500 group-hover:grayscale-0"
@@ -129,7 +129,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div ref={formRef} initial={{ opacity: 0, x: 30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6 }}>
-            <div className="glass-card rounded-3xl p-8 lg:p-10">
+            <div className="glass-card rounded-3xl p-6 sm:p-8 lg:p-10">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
                   <MessageSquare className="w-6 h-6 text-accent" />

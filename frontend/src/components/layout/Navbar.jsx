@@ -21,7 +21,7 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (<>
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-xl border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 sm:bg-card/80 backdrop-blur-xl border-b border-border shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -67,7 +67,7 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors">
+          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors text-primary active:scale-95">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -77,13 +77,13 @@ export const Navbar = () => {
       <AnimatePresence>
         {isOpen && (<>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-primary/20 backdrop-blur-sm lg:hidden z-40" onClick={() => setIsOpen(false)} />
-          <motion.div initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "spring", damping: 25, stiffness: 200 }} className="fixed top-0 right-0 bottom-0 w-80 bg-card border-l border-border shadow-2xl lg:hidden z-50">
+          <motion.div initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ type: "spring", damping: 25, stiffness: 200 }} className="fixed top-0 right-0 bottom-0 w-full max-w-[300px] bg-card border-l border-border shadow-2xl lg:hidden z-50">
             <div className="flex flex-col h-full p-6">
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-8 border-b border-border/50 pb-4">
                 <span className="font-display font-bold text-xl text-primary">
                   DermaCare<span className="text-accent">+</span>
                 </span>
-                <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg hover:bg-muted transition-colors">
+                <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg hover:bg-muted transition-colors text-primary">
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -94,10 +94,10 @@ export const Navbar = () => {
                     <Link
                       to={link.path}
                       onClick={() => setIsOpen(false)}
-                      className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
+                      className={`block px-4 py-3 rounded-xl text-base font-semibold transition-all duration-300 ${
                         location.pathname === link.path
-                          ? "bg-accent text-accent-foreground"
-                          : "text-foreground hover:bg-muted"
+                          ? "bg-accent text-accent-foreground shadow-md"
+                          : "text-foreground hover:bg-muted border border-transparent hover:border-border/50"
                       }`}
                     >
                       {link.name}

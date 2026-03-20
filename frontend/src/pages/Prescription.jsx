@@ -56,6 +56,23 @@ const Prescription = () => {
   const [previewImage, setPreviewImage] = useState(null);
   const fileInputRef = useRef(null);
 
+  const compressImage = (base64Str, maxWidth = 400) => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.src = base64Str;
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        const scale = maxWidth / img.width;
+        if (scale >= 1) return resolve(base64Str);
+        canvas.width = maxWidth;
+        canvas.height = img.height * scale;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL("image/jpeg", 0.7));
+      };
+    });
+  };
+
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -81,10 +98,13 @@ const Prescription = () => {
 
     setIsAnalyzing(true);
     try {
+      // Compress image to 200px width for lightning fast analysis
+      const compressedImage = await compressImage(previewImage, 200);
+
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/analyze-skin`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: previewImage })
+        body: JSON.stringify({ image: compressedImage })
       });
 
       if (response.ok) {
@@ -237,7 +257,7 @@ const Prescription = () => {
 
             {/* Upload Area */}
             <Card className="border-2 border-dashed border-slate-200 bg-white/80 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-accent/40 shadow-xl shadow-slate-200/50">
-              <CardContent className="p-8 md:p-12">
+              <CardContent className="p-6 sm:p-8 md:p-12">
                 {!previewImage ? (
                   <div
                     className="flex flex-col items-center justify-center cursor-pointer space-y-4"
@@ -419,9 +439,8 @@ const Prescription = () => {
         </div>
       </section>
 
-      {/* Prescription Detail Modal */}
       <Dialog open={!!selectedPrescription} onOpenChange={() => setSelectedPrescription(null)}>
-        <DialogContent className="max-w-2xl rounded-[2rem] p-0 overflow-hidden border-none shadow-3xl bg-white text-slate-900">
+        <DialogContent className="max-w-2xl w-[95%] sm:w-full rounded-2xl sm:rounded-[2rem] p-0 overflow-hidden border-none shadow-3xl bg-white text-slate-900">
           {selectedPrescription && (
             <div className="relative">
               <div className="bg-slate-900 p-8 text-white">
@@ -501,7 +520,7 @@ const Prescription = () => {
 
       {/* AI Analysis Result Modal - Medical Report Style */}
       <Dialog open={!!analysisResult} onOpenChange={() => setAnalysisResult(null)}>
-        <DialogContent className="max-w-3xl rounded-[2.5rem] p-0 overflow-hidden border-none shadow-4xl bg-white max-h-[90vh] flex flex-col">
+        <DialogContent className="max-w-3xl w-[95%] sm:w-full rounded-2xl sm:rounded-[2.5rem] p-0 overflow-hidden border-none shadow-4xl bg-white max-h-[90vh] flex flex-col">
           <div className="bg-accent p-8 text-white shrink-0 relative overflow-hidden">
             {/* Decorative element */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />

@@ -282,7 +282,7 @@ const Appointment = () => {
         </div>
 
         {/* Glass Form Card */}
-        <motion.div className="glass-card rounded-3xl p-8 lg:p-12" layout>
+        <motion.div className="glass-card rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-12" layout>
           <AnimatePresence mode="wait">
             {/* Step 1: Personal Info */}
             {currentStep === 1 && (<motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.3 }}>
@@ -352,8 +352,8 @@ const Appointment = () => {
                 </div>
                 <div className="space-y-2">
                   <Label className={errors.time ? "text-destructive" : ""}>Available Time Slots</Label>
-                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
-                    {timeSlots.map((slot) => (<button key={slot} type="button" onClick={() => updateForm("time", slot)} className={`p-3 rounded-xl text-sm font-medium transition-all ${formData.time === slot
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
+                    {timeSlots.map((slot) => (<button key={slot} type="button" onClick={() => updateForm("time", slot)} className={`p-2.5 sm:p-3 rounded-xl text-xs sm:text-sm font-medium transition-all ${formData.time === slot
                       ? "bg-accent text-accent-foreground"
                       : `bg-muted text-muted-foreground hover:bg-accent/10 ${errors.time ? "border border-destructive/50" : ""}`}`}>
                       {slot}
@@ -369,31 +369,31 @@ const Appointment = () => {
               <h2 className="font-display text-2xl font-bold text-foreground mb-6">
                 Confirm Your Appointment
               </h2>
-              <div className="bg-muted rounded-2xl p-6 space-y-4">
+              <div className="bg-muted rounded-2xl p-4 sm:p-6 space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Patient</span>
-                  <span className="font-medium text-foreground">{formData.firstName} {formData.lastName}</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Patient</span>
+                  <span className="font-medium text-foreground text-sm sm:text-base text-right">{formData.firstName} {formData.lastName}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Email</span>
-                  <span className="font-medium text-foreground">{formData.email}</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Email</span>
+                  <span className="font-medium text-foreground text-sm sm:text-base text-right truncate ml-4">{formData.email}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Department</span>
-                  <span className="font-medium text-foreground">{formData.department}</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Department</span>
+                  <span className="font-medium text-foreground text-sm sm:text-base text-right">{formData.department}</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Date</span>
-                  <span className="font-medium text-foreground">{formData.date}</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Date</span>
+                  <span className="font-medium text-foreground text-sm sm:text-base text-right">{formData.date}</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-muted-foreground">Time</span>
-                  <span className="font-medium text-foreground">{formData.time}</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Time</span>
+                  <span className="font-medium text-foreground text-sm sm:text-base text-right">{formData.time}</span>
                 </div>
               </div>
               <div className="flex items-start gap-3 mt-6 p-4 rounded-xl bg-accent/10">
-                <AlertCircle className="w-5 h-5 text-accent mt-0.5" />
-                <p className="text-sm text-muted-foreground">
+                <AlertCircle className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Please arrive 15 minutes before your scheduled appointment.
                   Bring a valid ID and any relevant medical records.
                 </p>
@@ -403,16 +403,16 @@ const Appointment = () => {
 
           {/* Navigation Buttons */}
           <div className="flex justify-between mt-8 pt-6 border-t border-border">
-            <Button variant="outline" onClick={prevStep} disabled={currentStep === 1} className="rounded-xl px-6">
-              <ChevronLeft className="w-4 h-4 mr-2" />
+            <Button variant="outline" onClick={prevStep} disabled={currentStep === 1} className="rounded-xl px-4 sm:px-6 h-10 sm:h-auto text-xs sm:text-base">
+              <ChevronLeft className="w-4 h-4 mr-1 sm:mr-2" />
               Previous
             </Button>
-            {currentStep < 4 ? (<Button onClick={nextStep} className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl px-6">
+            {currentStep < 4 ? (<Button onClick={nextStep} className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl px-4 sm:px-6 h-10 sm:h-auto text-xs sm:text-base">
               Next Step
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </Button>) : (<Button onClick={handleSubmit} className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl px-6">
-              Confirm Booking
-              <Check className="w-4 h-4 ml-2" />
+              <ChevronRight className="w-4 h-4 ml-1 sm:ml-2" />
+            </Button>) : (<Button onClick={handleSubmit} className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl px-4 sm:px-6 h-10 sm:h-auto text-xs sm:text-base">
+              Confirm
+              <Check className="w-4 h-4 ml-1 sm:ml-2" />
             </Button>)}
           </div>
         </motion.div>
@@ -421,52 +421,52 @@ const Appointment = () => {
     {/* Educational Sections */}
     <section className="py-20 lg:py-32 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24 sm:mb-32">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
-              <img src={heroHospital} alt="Clinic Interior" className="w-full h-[500px] object-cover" />
+            <div className="relative z-10 rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 sm:border-8 border-white">
+              <img src={heroHospital} alt="Clinic Interior" className="w-full h-[250px] sm:h-[500px] object-cover" />
               <div className="absolute inset-0 bg-primary/20" />
             </div>
-            {/* Floating stats card */}
+            {/* Floating stats card - Repositioned for mobile */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="absolute -bottom-8 -right-8 bg-white p-6 rounded-3xl shadow-xl z-20 max-w-[240px]"
+              className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-8 bg-white p-4 sm:p-6 rounded-2xl sm:rounded-3xl shadow-xl z-20 max-w-[180px] sm:max-w-[240px] border border-border"
             >
-              <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center">
-                  <ShieldCheck className="w-5 h-5 text-accent" />
+              <div className="flex items-center gap-2 sm:gap-4 mb-2">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                 </div>
-                <span className="font-bold text-foreground">Secure Portal</span>
+                <span className="font-bold text-foreground text-sm sm:text-base">Secure Portal</span>
               </div>
-              <p className="text-xs text-muted-foreground">Your medical information is encrypted and handled with clinical precision.</p>
+              <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed">Your medical information is encrypted and handled with clinical precision.</p>
             </motion.div>
           </motion.div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             <div>
-              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-widest mb-4">Patient Guide</span>
-              <h2 className="font-display text-4xl font-bold text-foreground mb-6 leading-tight">How to Get Started with <span className="text-accent italic">DermaCare</span></h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">Booking your skin consultation is a seamless journey designed for your comfort and clarity.</p>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-4">Patient Guide</span>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6 leading-tight text-center lg:text-left">How to Get Started with <span className="text-accent italic">DermaCare</span></h2>
+              <p className="text-muted-foreground text-base sm:text-lg leading-relaxed text-center lg:text-left">Booking your skin consultation is a seamless journey designed for your comfort and clarity.</p>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               {[
                 { step: "01", title: "Fill the Form", desc: "Provide your basic symptoms and personal details using our intelligent booking interface above." },
                 { step: "02", title: "Choose Your Slot", desc: "Select a department and an available time that fits your schedule perfectly." },
                 { step: "03", title: "Instant Notification", desc: "Receive an SMS and Email confirmation with your unique appointment reference code." }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-6">
-                  <span className="text-4xl font-display font-black text-accent/20 shrink-0">{item.step}</span>
+                <div key={idx} className="flex gap-4 sm:gap-6">
+                  <span className="text-3xl sm:text-4xl font-display font-black text-accent/20 shrink-0">{item.step}</span>
                   <div>
-                    <h4 className="font-bold text-foreground text-lg mb-1">{item.title}</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                    <h4 className="font-bold text-foreground text-base sm:text-lg mb-1">{item.title}</h4>
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -475,33 +475,33 @@ const Appointment = () => {
         </div>
 
         {/* Status Section */}
-        <div className="bg-primary rounded-[3rem] p-8 lg:p-20 relative overflow-hidden text-white shadow-2xl shadow-primary/20">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-          <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="font-display text-3xl font-bold mb-6">Tracking Your Progress</h3>
-              <p className="text-primary-foreground/80 text-lg mb-8 leading-relaxed">
+        <div className="bg-primary rounded-3xl sm:rounded-[3rem] p-6 lg:p-20 relative overflow-hidden text-white shadow-2xl shadow-primary/20">
+          <div className="absolute top-0 right-0 w-64 h-64 sm:w-96 sm:h-96 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h3 className="font-display text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Tracking Your Progress</h3>
+              <p className="text-primary-foreground/80 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
                 Stay updated on your consultation status in real-time. Use the
                 <span className="text-accent font-bold"> "Check Your Status"</span> button at the top
-                of this page to see if your appointment has been confirmed or read by our specialists.
+                of this page to see if your appointment has been confirmed.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10">
-                  <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-white shrink-0">
-                    <ClipboardList className="w-5 h-5" />
+              <div className="space-y-3 sm:space-y-4 text-left">
+                <div className="flex items-center gap-3 sm:gap-4 bg-white/5 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/10">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-accent flex items-center justify-center text-white shrink-0">
+                    <ClipboardList className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <p className="text-sm font-medium">Unique reference tracking for every booking</p>
+                  <p className="text-xs sm:text-sm font-medium">Unique reference tracking for every booking</p>
                 </div>
-                <div className="flex items-center gap-4 bg-white/5 p-4 rounded-2xl border border-white/10">
-                  <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-white shrink-0">
-                    <HelpCircle className="w-5 h-5" />
+                <div className="flex items-center gap-3 sm:gap-4 bg-white/5 p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-white/10">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-accent flex items-center justify-center text-white shrink-0">
+                    <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
-                  <p className="text-sm font-medium">Automatic updates as soon as our doctors review your file</p>
+                  <p className="text-xs sm:text-sm font-medium">Automatic updates as soon as reviews are file</p>
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <img src={aboutDoctor} alt="Digital Records" className="rounded-3xl shadow-xl w-full h-[340px] object-cover" />
+            <div className="relative mt-8 lg:mt-0">
+              <img src={aboutDoctor} alt="Digital Records" className="rounded-xl sm:rounded-3xl shadow-xl w-full h-[200px] sm:h-[340px] object-cover" />
               <div className="absolute -inset-4 bg-accent/20 blur-2xl rounded-full -z-10" />
             </div>
           </div>

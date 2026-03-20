@@ -569,13 +569,12 @@ const FaceRecognition = () => {
                         </p>
                     </motion.div>
 
-                    <div className="grid lg:grid-cols-5 gap-8">
-
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                         {/* Camera Panel (left 3 cols) */}
                         <motion.div
                             initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="lg:col-span-3 flex flex-col gap-6"
+                            className="lg:col-span-3 flex flex-col gap-6 order-1"
                         >
                             <div className="relative bg-card border border-border rounded-3xl overflow-hidden shadow-2xl">
                                 <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-violet-500 via-accent to-violet-500 opacity-60 z-10" />
@@ -603,7 +602,7 @@ const FaceRecognition = () => {
                                 </div>
 
                                 {/* Video area */}
-                                <div className="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
+                                <div className="relative aspect-square sm:aspect-video bg-black flex items-center justify-center overflow-hidden">
                                     <video
                                         ref={videoRef}
                                         autoPlay
@@ -647,12 +646,12 @@ const FaceRecognition = () => {
                                 </div>
 
                                 {/* Controls bar */}
-                                <div className="relative z-10 flex items-center justify-center gap-4 px-6 py-4 border-t border-border bg-card/80 backdrop-blur-sm">
+                                <div className="relative z-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-4 sm:px-6 py-4 border-t border-border bg-card/80 backdrop-blur-sm">
                                     {!cameraActive ? (
                                         <Button
                                             onClick={startCamera}
                                             disabled={loadingModels}
-                                            className="bg-violet-600 hover:bg-violet-700 text-white rounded-xl px-8 py-5 text-sm font-bold gap-2"
+                                            className="w-full sm:w-auto bg-violet-600 hover:bg-violet-700 text-white rounded-xl px-8 py-5 text-sm font-bold gap-2"
                                         >
                                             <Camera className="w-5 h-5" />
                                             {loadingModels ? "Loading AI Models…" : "Start Camera"}
@@ -662,24 +661,24 @@ const FaceRecognition = () => {
                                             <Button
                                                 onClick={captureAndAnalyze}
                                                 disabled={analyzing || !modelsLoaded}
-                                                className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl px-8 py-5 text-sm font-bold gap-2"
+                                                className="flex-1 sm:flex-initial bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl px-4 sm:px-8 py-5 text-sm font-bold gap-2"
                                             >
                                                 {analyzing ? (
                                                     <>
-                                                        <Activity className="w-5 h-5 animate-pulse" />
+                                                        <Activity className="w-4 h-4 sm:w-5 sm:h-5 animate-pulse" />
                                                         Analyzing…
                                                     </>
                                                 ) : (
                                                     <>
-                                                        <Sparkles className="w-5 h-5" />
-                                                        Capture & Analyze
+                                                        <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+                                                        Capture
                                                     </>
                                                 )}
                                             </Button>
                                             <Button
                                                 onClick={stopCamera}
                                                 variant="outline"
-                                                className="rounded-xl px-6 py-5 text-sm font-bold gap-2 border-border"
+                                                className="flex-1 sm:flex-initial rounded-xl px-4 sm:px-6 py-5 text-sm font-bold gap-2 border-border"
                                             >
                                                 <CameraOff className="w-4 h-4" />
                                                 Stop
@@ -749,7 +748,7 @@ const FaceRecognition = () => {
                         <motion.div
                             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="lg:col-span-2 flex flex-col gap-6"
+                            className="lg:col-span-2 flex flex-col gap-6 order-2"
                         >
                             <AnimatePresence mode="wait">
                                 {(activeMood && activeSkin) ? (

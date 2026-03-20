@@ -112,30 +112,30 @@ const Services = () => {
     <AnimatePresence>
       {selectedService && (<>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-primary/50 backdrop-blur-sm z-50" onClick={() => setSelectedService(null)} />
-        <motion.div initial={{ opacity: 0, scale: 0.9, x: "-50%", y: "-40%" }} animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }} exit={{ opacity: 0, scale: 0.9, x: "-50%", y: "-40%" }} className="fixed left-1/2 top-1/2 w-[90%] max-w-lg bg-card rounded-3xl p-8 shadow-2xl z-50">
-          <button onClick={() => setSelectedService(null)} className="absolute top-4 right-4 p-2 rounded-full hover:bg-muted transition-colors">
+        <motion.div initial={{ opacity: 0, scale: 0.9, x: "-50%", y: "-40%" }} animate={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }} exit={{ opacity: 0, scale: 0.9, x: "-50%", y: "-40%" }} className="fixed left-1/2 top-1/2 w-[92%] sm:w-[90%] max-w-lg bg-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-2xl z-50 max-h-[90vh] overflow-y-auto">
+          <button onClick={() => setSelectedService(null)} className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-full hover:bg-muted transition-colors z-10">
             <X className="w-5 h-5" />
           </button>
 
-          <div className={`w-16 h-16 rounded-2xl ${selectedService.color} flex items-center justify-center mb-6`}>
-            <selectedService.icon className={`w-8 h-8 ${selectedService.iconColor}`} />
+          <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl ${selectedService.color} flex items-center justify-center mb-4 sm:mb-6`}>
+            <selectedService.icon className={`w-7 h-7 sm:w-8 sm:h-8 ${selectedService.iconColor}`} />
           </div>
 
-          <h3 className="font-display font-bold text-2xl text-foreground mb-4">
+          <h3 className="font-display font-bold text-xl sm:text-2xl text-foreground mb-3 sm:mb-4">
             {selectedService.title}
           </h3>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6">
             {selectedService.fullDesc}
           </p>
 
-          <div className="space-y-3 mb-8">
+          <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
             {selectedService.features.map((feature, i) => (<motion.div key={feature} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }} className="flex items-center gap-3">
-              <CheckCircle className="w-5 h-5 text-accent" />
-              <span className="text-foreground">{feature}</span>
+              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-accent shrink-0" />
+              <span className="text-foreground text-xs sm:text-sm">{feature}</span>
             </motion.div>))}
           </div>
 
-          <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl py-6">
+          <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-xl py-5 sm:py-6 text-sm sm:text-base">
             <Link to="/appointment">Book Appointment</Link>
           </Button>
         </motion.div>

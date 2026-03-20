@@ -182,7 +182,7 @@ export const VoiceAssistant = ({ isOpen, onClose }) => {
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.9, opacity: 0 }}
-                        className="relative w-full max-w-xl bg-card border border-border rounded-[3rem] shadow-[0_30px_90px_rgba(0,0,0,0.5)] overflow-hidden p-8 lg:p-12"
+                        className="relative w-[95%] sm:w-[90%] max-w-xl bg-card border border-border rounded-[2rem] sm:rounded-[3rem] shadow-[0_30px_90px_rgba(0,0,0,0.5)] overflow-hidden p-6 sm:p-8 lg:p-12"
                     >
                         {/* Professional Accents */}
                         <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-accent via-primary to-accent opacity-50" />

@@ -18,8 +18,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173').split(',');
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1 || origin.startsWith('http://localhost:')) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
@@ -58,7 +65,7 @@ app.post('/api/feedback', async (req, res) => {
 
 app.get('/api/feedback', async (req, res) => {
   try {
-    const feedbacks = await Feedback.find().sort({ createdAt: -1 });
+    const feedbacks = await Feedback.find().sort({ createdAt: -1 }).lean();
     res.json(feedbacks);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -89,9 +96,9 @@ app.patch('/api/feedback/:id', async (req, res) => {
 app.get('/api/admin/notifications', async (req, res) => {
   try {
     const [newContacts, newFeedback, newAppointments] = await Promise.all([
-      Contact.find({ status: 'New' }).sort({ createdAt: -1 }),
-      Feedback.find({ status: 'New' }).sort({ createdAt: -1 }),
-      Appointment.find({ status: 'Pending' }).sort({ createdAt: -1 })
+      Contact.find({ status: 'New' }).sort({ createdAt: -1 }).lean(),
+      Feedback.find({ status: 'New' }).sort({ createdAt: -1 }).lean(),
+      Appointment.find({ status: 'Pending' }).sort({ createdAt: -1 }).lean()
     ]);
 
     const notifications = [
@@ -112,7 +119,7 @@ app.get('/api/admin/notifications', async (req, res) => {
 
 app.get('/api/contacts', async (req, res) => {
   try {
-    const contacts = await Contact.find().sort({ createdAt: -1 });
+    const contacts = await Contact.find().sort({ createdAt: -1 }).lean();
     res.json(contacts);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -152,7 +159,7 @@ app.post('/api/user-logins', async (req, res) => {
 
 app.get('/api/user-logins', async (req, res) => {
   try {
-    const logins = await UserLogin.find().sort({ createdAt: -1 });
+    const logins = await UserLogin.find().sort({ createdAt: -1 }).lean();
     res.json(logins);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -172,19 +179,17 @@ app.post('/api/appointments', async (req, res) => {
 
 // Status Check Route (Placed before polymorphic routes)
 app.get('/api/check-status/:email', async (req, res) => {
-  console.log(`Checking status for email: ${req.params.email}`);
   try {
-    const appointments = await Appointment.find({ email: req.params.email }).sort({ createdAt: -1 });
+    const appointments = await Appointment.find({ email: req.params.email }).sort({ createdAt: -1 }).lean();
     res.json(appointments);
   } catch (error) {
-    console.error("Status check error:", error);
     res.status(500).json({ error: error.message });
   }
 });
 
 app.get('/api/appointments', async (req, res) => {
   try {
-    const appointments = await Appointment.find().sort({ createdAt: -1 });
+    const appointments = await Appointment.find().sort({ createdAt: -1 }).lean();
     res.json(appointments);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -214,27 +219,30 @@ app.delete('/api/appointments/:id', async (req, res) => {
 // Chatbot functionality
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
-// Load Skincare Dataset
+// Load Skincare Dataset & Cache Smart Model
 let skincareProducts = [];
 let skinKnowledgeBase = [];
+let cachedSmartModel = null;
 
-const loadSkincareData = () => {
+const loadBackendData = () => {
   const productsPath = path.join(__dirname, '..', 'chatbot_dataset', 'skincare_products_clean.csv');
   const knowledgePath = path.join(__dirname, '..', 'chatbot_dataset', 'skin_knowledge_base.json');
+  const modelPath = path.join(__dirname, 'smart_model.json');
 
   if (fs.existsSync(productsPath)) {
-    fs.createReadStream(productsPath)
-      .pipe(csv())
-      .on('data', (data) => skincareProducts.push(data))
-      .on('end', () => console.log(`Loaded ${skincareProducts.length} skincare products.`));
+    fs.createReadStream(productsPath).pipe(csv()).on('data', (data) => skincareProducts.push(data));
   }
 
   if (fs.existsSync(knowledgePath)) {
     skinKnowledgeBase = JSON.parse(fs.readFileSync(knowledgePath, 'utf8'));
-    console.log(`Loaded ${skinKnowledgeBase.length} skin knowledge entries.`);
+  }
+
+  if (fs.existsSync(modelPath)) {
+    cachedSmartModel = JSON.parse(fs.readFileSync(modelPath, 'utf8'));
+    console.log("Cached KNN Smart Model for peak performance.");
   }
 };
-loadSkincareData();
+loadBackendData();
 
 app.post('/api/chat', async (req, res) => {
   const { message } = req.body;
@@ -403,36 +411,49 @@ const rgbToHsv = (r, g, b) => {
 
 // Advanced KNN Analysis Engine (95% Accuracy Target)
 const analyzeSmartKNN = async (imageBuffer) => {
-  const modelPath = path.join(__dirname, 'smart_model.json');
-  if (!fs.existsSync(modelPath)) {
-    throw new Error("Trained model missing. Please run node train_model.js first.");
+  if (!cachedSmartModel) {
+    throw new Error("Trained model missing or failed to load.");
   }
   
-  const model = JSON.parse(fs.readFileSync(modelPath, 'utf8'));
+  const model = cachedSmartModel;
   const img = await Jimp.read(imageBuffer);
   img.resize({ w: 80, h: 80 });
   
-  // 1. Extract features from upload
+  // 1. Extract features with single-pass statistics
   const hBuckets = new Array(8).fill(0), sBuckets = new Array(4).fill(0);
-  const hVals = [], sVals = [], vVals = [];
+  let hSum = 0, sSum = 0, vSum = 0;
+  let hSumSq = 0, sSumSq = 0, vSumSq = 0;
+  const pixCount = img.bitmap.width * img.bitmap.height;
 
-  img.scan(0, 0, img.bitmap.width, img.bitmap.height, function(x, y, idx) {
-    const r = this.bitmap.data[idx+0], g = this.bitmap.data[idx+1], b = this.bitmap.data[idx+2];
-    const [h, s, v] = rgbToHsv(r, g, b);
+  for (let i = 0; i < img.bitmap.data.length; i += 4) {
+    let r = img.bitmap.data[i] / 255, g = img.bitmap.data[i+1] / 255, b = img.bitmap.data[i+2] / 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, v = max;
+    const d = max - min;
+    s = max === 0 ? 0 : d / max;
+    if (max === min) { h = 0; } else {
+      if (max === r) h = (g - b) / d + (g < b ? 6 : 0);
+      else if (max === g) h = (b - r) / d + 2;
+      else h = (r - g) / d + 4;
+      h /= 6;
+    }
+
     hBuckets[Math.floor(h * 7.99)]++;
     sBuckets[Math.floor(s * 3.99)]++;
-    hVals.push(h); sVals.push(s); vVals.push(v);
-  });
+    
+    hSum += h; sSum += s; vSum += v;
+    hSumSq += h * h; sSumSq += s * s; vSumSq += v * v;
+  }
 
-  const pixCount = img.bitmap.width * img.bitmap.height;
-  const mean = arr => arr.reduce((a,b) => a+b, 0) / arr.length;
-  const stdDev = (arr, m) => Math.sqrt(arr.reduce((a,b) => a + Math.pow(b-m, 2), 0) / arr.length);
+  const hm = hSum / pixCount, sm = sSum / pixCount, vm = vSum / pixCount;
+  const hStd = Math.sqrt(Math.max(0, (hSumSq / pixCount) - (hm * hm)));
+  const sStd = Math.sqrt(Math.max(0, (sSumSq / pixCount) - (sm * sm)));
+  const vStd = Math.sqrt(Math.max(0, (vSumSq / pixCount) - (vm * vm)));
 
-  const hm = mean(hVals), sm = mean(sVals), vm = mean(vVals);
   const currentFeat = {
     hue: hBuckets.map(c => c / pixCount),
     sat: sBuckets.map(c => c / pixCount),
-    moments: [hm, sm, vm, stdDev(hVals, hm), stdDev(sVals, sm), stdDev(vVals, vm)]
+    moments: [hm, sm, vm, hStd, sStd, vStd]
   };
 
   // 2. KNN Search (K=11 for high precision)
@@ -541,7 +562,7 @@ app.post('/api/prescriptions', async (req, res) => {
 
 app.get('/api/prescriptions', async (req, res) => {
   try {
-    const prescriptions = await Prescription.find().sort({ createdAt: -1 });
+    const prescriptions = await Prescription.find().sort({ createdAt: -1 }).lean();
     res.json(prescriptions);
   } catch (error) {
     res.status(500).json({ error: error.message });
